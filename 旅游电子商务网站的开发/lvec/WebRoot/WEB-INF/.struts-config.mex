@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/administrator.do" location="50,50" dimension="330,116" />
+  <StrutsActivity path="/spotuser.do" location="650,250" dimension="295,116" />
+  <StrutsActivity path="/viewspot.do" location="50,650" dimension="297,116" />
+  <StrutsActivity path="/hotel.do" location="650,850" dimension="293,116" />
+  <StrutsActivity path="/goodtype.do" location="950,1050" dimension="303,116" />
+  <StrutsActivity path="/goodinfo.do" location="650,1250" dimension="321,116" />
+  <StrutsActivity path="/spotorder.do" location="1250,850" dimension="305,116" />
+  <StrutsActivity path="/roomtype.do" location="650,1450" dimension="306,116" />
+  <StrutsActivity path="/hotelorder.do" location="950,1650" dimension="311,116" />
+  <StrutsActivity path="/goodorder.do" location="1550,1050" dimension="334,116" />
+  <StrutsActivity path="/goodorderinfo.do" location="1550,1650" dimension="362,116" />
+  <StrutsActivity path="/spotcomment.do" location="1550,150" dimension="334,116" />
+  <StrutsActivity path="/hotelcomment.do" location="1850,750" dimension="340,116" />
+  <StrutsActivity path="/goodcomment.do" location="350,2050" dimension="340,116" />
+  <StrutsActivity path="/luntanhuati.do" location="1550,2050" dimension="314,116" />
+  <StrutsActivity path="/admin/adminadd.jsp" location="950,50" dimension="192,56" />
+  <StrutsActivity path="/admin/adminedit.jsp" location="50,250" dimension="193,56" />
+  <StrutsActivity path="/admin/adminmana.jsp" location="350,250" dimension="203,56" />
+  <StrutsActivity path="/form/administrator.jsp" location="650,50" dimension="207,56" />
+  <StrutsActivity path="/qiantai/spotuseradd.jsp" location="350,450" dimension="215,56" />
+  <StrutsActivity path="index.jsp" location="50,2050" dimension="102,56" />
+  <StrutsActivity path="/admin/spotusermana.jsp" location="650,450" dimension="222,56" />
+  <StrutsActivity path="/qiantai/spotuseredit.jsp" location="950,450" dimension="216,56" />
+  <StrutsActivity path="/form/spotuser.jsp" location="50,450" dimension="173,56" />
+  <StrutsActivity path="/admin/viewspotedit.jsp" location="950,650" dimension="214,56" />
+  <StrutsActivity path="/admin/viewspotmana.jsp" location="50,850" dimension="224,56" />
+  <StrutsActivity path="viewspotlist.jsp" location="1550,350" dimension="149,56" />
+  <StrutsActivity path="viewspotinfo.jsp" location="1250,1850" dimension="156,56" />
+  <StrutsActivity path="/form/viewspot.jsp" location="650,650" dimension="175,56" />
+  <StrutsActivity path="/admin/hotelmana.jsp" location="650,1050" dimension="196,56" />
+  <StrutsActivity path="hotelinfo.jsp" location="1850,350" dimension="128,56" />
+  <StrutsActivity path="/admin/hoteledit.jsp" location="350,1050" dimension="186,56" />
+  <StrutsActivity path="hotellist.jsp" location="1850,550" dimension="121,56" />
+  <StrutsActivity path="/form/hotel.jsp" location="50,1050" dimension="147,56" />
+  <StrutsActivity path="/admin/goodtypemana.jsp" location="350,1250" dimension="231,56" />
+  <StrutsActivity path="/form/goodtype.jsp" location="50,1250" dimension="182,56" />
+  <StrutsActivity path="goodinfo.jsp" location="1850,1450" dimension="130,56" />
+  <StrutsActivity path="shoppingcart.jsp" location="1250,2050" dimension="159,56" />
+  <StrutsActivity path="goodlist.jsp" location="1850,1850" dimension="123,56" />
+  <StrutsActivity path="/admin/goodinfoedit.jsp" location="1250,650" dimension="216,56" />
+  <StrutsActivity path="/admin/goodinfomana.jsp" location="1250,450" dimension="226,56" />
+  <StrutsActivity path="/form/goodinfo.jsp" location="50,1450" dimension="177,56" />
+  <StrutsActivity path="/admin/spotordermana.jsp" location="350,1450" dimension="232,56" />
+  <StrutsActivity path="/form/spotorder.jsp" location="1250,1250" dimension="183,56" />
+  <StrutsActivity path="/admin/hotelroomtypemana.jsp" location="350,1650" dimension="269,56" />
+  <StrutsActivity path="/form/roomtype.jsp" location="1250,1450" dimension="182,56" />
+  <StrutsActivity path="/admin/hotelordermana.jsp" location="1550,550" dimension="237,56" />
+  <StrutsActivity path="/form/hotelorder.jsp" location="50,1850" dimension="188,56" />
+  <StrutsActivity path="/admin/goodordermana.jsp" location="1550,1450" dimension="239,56" />
+  <StrutsActivity path="/form/goodorder.jsp" location="1550,1250" dimension="190,56" />
+  <StrutsActivity path="/admin/goodorderinfomana.jsp" location="650,1850" dimension="267,56" />
+  <StrutsActivity path="/form/goodorderinfo.jsp" location="350,1850" dimension="218,56" />
+  <StrutsActivity path="/form/spotcomment.jsp" location="1550,1850" dimension="212,56" />
+  <StrutsActivity path="/form/hotelcomment.jsp" location="1850,1250" dimension="217,56" />
+  <StrutsActivity path="/form/goodcomment.jsp" location="950,2050" dimension="219,56" />
+  <StrutsActivity path="luntanhuatiinfo.jsp" location="650,2250" dimension="171,56" />
+  <StrutsActivity path="luntanhuatilist.jsp" location="350,2250" dimension="164,56" />
+  <StrutsActivity path="/form/luntanhuati.jsp" location="50,2250" dimension="190,56" />
+  <StrutsActivity path="/admin/viewspotadd.jsp" location="350,850" dimension="213,56" />
+  <StrutsActivity path="/admin/roomtypemana.jsp" location="50,1650" dimension="231,56" />
+  <StrutsActivity path="/luntanhuatiinfo.jsp" location="950,2250" dimension="177,56" />
+  <StrutsActivity path="/luntanhuatilist.jsp" location="1250,2250" dimension="170,56" />
+  <StrutsActivity path="orderlook.jsp" />
+  <StrutsTransition id="/goodinfo.do,goodinfoMana,/admin/goodinfomana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="971,1321" />
+      <AbsolutePoint location="2265,1321" />
+      <AbsolutePoint location="2265,478" />
+      <AbsolutePoint location="1476,478" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hotel.do,hotelInfoMana,hotelinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="796,908" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewspot.do,viewspotListMana,viewspotlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,708" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewspot.do,viewspotInfoMana,viewspotinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,708" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hotel.do,hotelBeforeModify,/admin/hoteledit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="796,908" />
+      <AbsolutePoint location="443,1078" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/luntanhuati.do,luntanhuatiInfoMana,/luntanhuatiinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,2121" />
+      <AbsolutePoint location="1038,2121" />
+      <AbsolutePoint location="1038,2250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spotuser.do,spotuserLogin,index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="797,308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/goodorderinfo.jsp,null,/goodorderinfo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="568,1878" />
+      <AbsolutePoint location="1731,1878" />
+      <AbsolutePoint location="1731,1766" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/administrator.do,administratorMana,/admin/adminmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="365,166" />
+      <AbsolutePoint location="365,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goodinfo.do,goodinfoInfoMana,goodinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="810,1308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/spotcomment.jsp,null,/spotcomment.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hotelorder.do,hotelorderMana,/admin/hotelordermana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1105,1708" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/roomtype.jsp,null,/roomtype.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1478" />
+      <AbsolutePoint location="956,1478" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/luntanhuati.do,luntanhuatiInfoMana,luntanhuatiinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1707,2108" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/administrator.do,administratorBeforeModify,/admin/adminedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="146,166" />
+      <AbsolutePoint location="146,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/viewspot.jsp,null,/viewspot.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,678" />
+      <AbsolutePoint location="347,678" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goodinfo.do,goodinfoShoppingCartMana,shoppingcart.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="810,1308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spotuser.do,spotuserBeforeModify,/qiantai/spotuseredit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="797,308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/spotorder.jsp,null,/spotorder.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1402,1250" />
+      <AbsolutePoint location="1402,966" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spotuser.do,spotuserOrderLookMana,orderlook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="797,308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/goodinfo.jsp,null,/goodinfo.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="138,1450" />
+      <AbsolutePoint location="138,1321" />
+      <AbsolutePoint location="650,1321" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/hotel.jsp,null,/hotel.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="123,1050" />
+      <AbsolutePoint location="123,951" />
+      <AbsolutePoint location="650,951" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hotel.do,hotelMana,/admin/hotelmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="748,966" />
+      <AbsolutePoint location="748,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spotuser.do,spotuserAdd,/qiantai/spotuseradd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="797,308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goodtype.do,goodtypeMana,/admin/goodtypemana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1151" />
+      <AbsolutePoint location="465,1151" />
+      <AbsolutePoint location="465,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/goodcomment.jsp,null,/goodcomment.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,2078" />
+      <AbsolutePoint location="690,2078" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewspot.do,viewspotMana,/admin/viewspotmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="162,766" />
+      <AbsolutePoint location="162,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/spotuser.jsp,null,/spotuser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="136,450" />
+      <AbsolutePoint location="136,321" />
+      <AbsolutePoint location="650,321" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/administrator.jsp,null,/administrator.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,78" />
+      <AbsolutePoint location="380,78" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hotel.do,hotelListMana,hotellist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="796,908" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/luntanhuati.jsp,null,/luntanhuati.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="145,2306" />
+      <AbsolutePoint location="145,2381" />
+      <AbsolutePoint location="1737,2381" />
+      <AbsolutePoint location="1737,2166" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goodinfo.do,goodinfoBeforeModify,/admin/goodinfoedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="810,1308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/hotelorder.jsp,null,/hotelorder.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="144,1850" />
+      <AbsolutePoint location="144,1721" />
+      <AbsolutePoint location="950,1721" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/viewspot.do,viewspotBeforeModify,/admin/viewspotedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="347,721" />
+      <AbsolutePoint location="1027,721" />
+      <AbsolutePoint location="1027,706" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goodorderinfo.do,goodorderinfoMana,/admin/goodorderinfomana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1731,1708" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/luntanhuati.do,luntanhuatiListMana,luntanhuatilist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1707,2166" />
+      <AbsolutePoint location="1707,2471" />
+      <AbsolutePoint location="432,2471" />
+      <AbsolutePoint location="432,2306" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/hotelcomment.jsp,null,/hotelcomment.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2020,1250" />
+      <AbsolutePoint location="2020,866" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/luntanhuati.do,luntanhuatiListMana,/luntanhuatilist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1707,2166" />
+      <AbsolutePoint location="1707,2278" />
+      <AbsolutePoint location="1420,2278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goodinfo.do,goodinfoListMana,goodlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="810,1308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/goodorder.do,goodorderMana,/admin/goodordermana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1717,1108" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spotorder.do,spotorderMana,/admin/spotordermana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1402,908" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/roomtype.do,roomtypeMana,/admin/hotelroomtypemana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="803,1508" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/goodorder.jsp,null,/goodorder.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1717,1250" />
+      <AbsolutePoint location="1717,1166" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spotuser.do,spotuserMana,/admin/spotusermana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="797,308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/administrator.do,administratorAdd,/admin/adminadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="380,121" />
+      <AbsolutePoint location="1046,121" />
+      <AbsolutePoint location="1046,106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/goodtype.jsp,null,/goodtype.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="141,1250" />
+      <AbsolutePoint location="141,1121" />
+      <AbsolutePoint location="950,1121" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

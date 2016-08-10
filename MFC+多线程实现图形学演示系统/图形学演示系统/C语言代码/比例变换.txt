@@ -1,0 +1,48 @@
+         /***************************************************/
+         /************                        ***************/
+         /************      图形比例变换      ***************/
+         /************                        ***************/
+         /***************************************************/
+算法说明：
+点的缩放是指将该点沿X轴和Y轴方向按比例缩小或放大的变换。
+设图形上的点P(x,y)，在X轴和Y轴方向分别作Sx和Sy的缩放，
+结果生成新的点坐标P′(x′,y′)， 则  	
+         	x′=x . Sx， 
+	 	y′=y . Sy  
+用齐次坐标和矩阵表示为：
+                     [Sx 0  0]
+[x′,y′,1′]=[x,y,1][0  Sy 0]
+                     [0  0  1]
+C源程序：
+#include<graphics.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#define pi 3.1415927
+main()
+{
+  int i;
+  float temp_x1,temp_x2,temp_y1,temp_y2;
+  float x1=20.0,y1=20.0,x2=340.0,y2=370.0;
+  float scale_dx=0.5,scale_dy=0.8,temp;
+  int gdriver=DETECT,gmode;
+  initgraph(&gdriver,&gmode,"");
+  rectangle(x1,y1,x2,y2);
+  getch();
+   for(i=1;i<=3;i++)
+      {
+	getch();
+	temp_x1=(x1+x2)/2-(x2-x1)*scale_dx/2.0;
+	temp_x2=(x1+x2)/2+(x2-x1)*scale_dx/2.0;
+	temp_y1=(y1+y2)/2-(y2-y1)*scale_dy/2.0;
+	temp_y2=(y1+y2)/2+(y2-y1)*scale_dy/2.0;
+	rectangle((int)temp_x1,(int)temp_y1, (int)temp_x2,(int)temp_y2);
+	x1=temp_x1;
+	y1=temp_y1;
+	x2=temp_x2;
+	y2=temp_y2;
+      }
+   getch();
+   closegraph();
+}
+

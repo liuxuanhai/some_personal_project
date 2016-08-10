@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans >
+    <form-bean name="administratorForm" type="com.struts.form.AdministratorForm" />
+    <form-bean name="academyForm" type="com.struts.form.AcademyForm" />
+    <form-bean name="classroomForm" type="com.struts.form.ClassroomForm" />
+    <form-bean name="studentForm" type="com.struts.form.StudentForm" />
+    <form-bean name="teacherForm" type="com.struts.form.TeacherForm" />
+    <form-bean name="ptzhaopinForm" type="com.struts.form.PtzhaopinForm" />
+    <form-bean name="dxzhaopinForm" type="com.struts.form.DxzhaopinForm" />
+    <form-bean name="gonggaoForm" type="com.struts.form.GonggaoForm" />
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+      <action
+      attribute="administratorForm"
+      name="administratorForm"
+      path="/administrator"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.AdministratorAction"
+      cancellable="true" >
+      <forward
+        name="administratorMana"
+        path="/admin/adminmana.jsp"
+        redirect="true"
+        />
+		<forward name="administratorBeforeModify"
+		path="/admin/adminedit.jsp" 
+		redirect="true"
+		/>
+      </action>
+    <action
+      attribute="academyForm"
+      input="/form/academy.jsp"
+      name="academyForm"
+      path="/academy"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.AcademyAction"
+      cancellable="true" >
+      <forward
+        name="academyMana"
+        path="/admin/academymana.jsp"
+        redirect="true"
+        />
+        <forward
+        name="academyTeacherMana"
+        path="/admin/academyteacherlookup.jsp"
+        redirect="true"
+        />
+        <forward name="academyBeforeModify"
+		path="/admin/academyedit.jsp" 
+		redirect="true"
+		/>
+		<forward name="academyTeacherMana"  path="/academy/academyteachertoclass.jsp" 
+		redirect="true"></forward>
+		<forward name="academyJobStatMana" path="/academy/academyjobs.jsp"
+        redirect="true"></forward>
+      </action>
+    <action
+      attribute="classroomForm"
+      input="/form/classroom.jsp"
+      name="classroomForm"
+      path="/classroom"
+      scope="request"
+      parameter="method"
+      type="com.struts.action.ClassroomAction"
+      cancellable="true" >
+      <forward
+        name="classroomMana"
+        path="/admin/classroommana.jsp"
+        redirect="true"
+        />
+       <forward
+        name="classroomstudentMana"
+        path="/admin/classroomstudentlookup.jsp"
+        redirect="true"
+        />
+        <forward
+        name="academyClassroomMana"
+        path="/academy/classroom.jsp"
+        redirect="true"
+        />
+        <forward name="classroomJobStatMana"
+        path="/academy/classroomjobstat.jsp"
+        redirect="true"
+        ></forward>
+      </action>
+    <action
+      attribute="studentForm"
+      input="/form/student.jsp"
+      name="studentForm"
+      path="/student"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.StudentAction"
+      cancellable="true" >
+      <forward
+        name="studentMana"
+        path="/admin/studentmana.jsp"
+        redirect="true"
+        />
+        <forward name="studentManaByClassID" path="/admin/classroomstudentlookup.jsp"
+        redirect="true"/>
+        <forward name="studentAcademyManaByClassID" path="/academy/classroomstudentlookup.jsp"
+        redirect="true"/>
+        <forward
+        name="studentFind"
+        path="/student.do?method=studentFindExecute"
+        redirect="true"
+        />
+        <forward name="studentBeforeModify"
+		path="/admin/studentedit.jsp" 
+		redirect="true"
+		/>
+         <forward
+        name="studentBeforeAdd"
+        path="/admin/studentadd.jsp"
+        redirect="true"
+        />
+        
+        <forward name="academyClassjobsByAcademyid" path="/academy/classroomjobs.jsp"
+        redirect="true"></forward>
+        <forward name="studentTeacherManaByClassID" path="/teacher/classroomstudentlookup.jsp"
+        redirect="true"></forward>
+        
+        <forward name="studentLogin" path="/student/studentmain.jsp"
+        redirect="true"></forward>
+        <forward name="personStudentInfo" path="/student/studentinfo.jsp"
+        redirect="true"></forward>
+        <forward name="studentDirtypeStatus" path="/student/studentdirtypestatus.jsp"
+        redirect="true"
+        ></forward>
+        
+        <forward name="studentDirTescher" path="/student/studentmessage.jsp"
+        redirect="true"
+        ></forward>
+      </action>
+    <action
+      attribute="teacherForm"
+      input="/form/teacher.jsp"
+      name="teacherForm"
+      path="/teacher"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.TeacherAction"
+      cancellable="true" >
+      <forward name="academyAdminInfo" path="/academy/academyadmininfo.jsp"
+        redirect="true"></forward>
+        <forward name="personTeacherInfo" path="/teacher/teacherinfo.jsp"
+        redirect="true"></forward>
+      <forward
+        name="teacherMana"
+        path="/admin/teachermana.jsp"
+        redirect="true"
+        />
+        <forward name="academyLogin" path="/academy/academymain.jsp"
+        redirect="true"></forward>
+        <forward name="teacherLogin" path="/teacher/teachermain.jsp"
+        redirect="true"></forward>
+        <forward
+        name="teacherFind"
+        path="/teacher.do?method=teacherFindExecute"
+        redirect="true"
+        />
+        <forward
+        name="teacherManaByAcademyID"
+        path="/admin/academyteacherlookup.jsp"
+        redirect="true"
+        />
+        
+        <forward
+        name="academyTeacherManaByAcademyID"
+        path="/academy/academyteacherlookup.jsp"
+        redirect="true"
+        />
+        
+        <forward
+        name="teacherBeforeAdd"
+        path="/admin/teacheradd.jsp"
+        redirect="true"
+        />
+         <forward name="teacherBeforeModify"
+		path="/admin/teacheredit.jsp" 
+		redirect="true"
+		/>
+		<forward name="teacherFuzeClass"
+		path="/teacher/teacherclassmana.jsp" 
+		redirect="true"></forward>
+      </action>
+    <action
+      attribute="ptzhaopinForm"
+      input="/form/ptzhaopin.jsp"
+      name="ptzhaopinForm"
+      path="/ptzhaopin"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.PtzhaopinAction"
+      cancellable="true" >
+      <forward
+        name="ptzhaopinMana"
+        path="/admin/ptzhaopinmana.jsp"
+        redirect="true"
+        />
+        <forward
+        name="ptzhaopinInfoLook"
+        path="/admin/ptzhaopininfolook.jsp"
+        redirect="true"
+        />
+        <forward
+        name="ptzhaopinFind"
+        path="/ptzhaopin.do?method=ptzhaopinFindExecute"
+        redirect="true"
+        />
+         <forward name="ptzhaopinBeforeModify"
+		path="/admin/ptzhaopinedit.jsp" 
+		redirect="true"
+		/>
+      </action>
+    <action
+      attribute="dxzhaopinForm"
+      input="/form/dxzhaopin.jsp"
+      name="dxzhaopinForm"
+      parameter="method"
+      path="/dxzhaopin"
+      scope="request"
+      type="com.struts.action.DxzhaopinAction"
+      cancellable="true" >
+      <forward
+        name="dxzhaopinMana"
+        path="/admin/dxzhaopinmana.jsp"
+        redirect="true"
+        />
+        <forward
+        name="dxzhaopinInfoLook"
+        path="/admin/dxzhaopininfolook.jsp"
+        redirect="true"
+        />
+        <forward
+        name="dxzhaopinFind"
+        path="/dxzhaopin.do?method=dxzhaopinFindExecute"
+        redirect="true"
+        />
+         <forward name="dxzhaopinBeforeModify"
+		path="/admin/dxzhaopinedit.jsp" 
+		redirect="true"
+		/>
+      </action>
+    <action
+      attribute="gonggaoForm"
+      input="/form/gonggao.jsp"
+      name="gonggaoForm"
+      path="/gonggao"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.GonggaoAction"
+      cancellable="true" >
+      <forward
+        name="gonggaoMana"
+        path="/admin/gonggaomana.jsp"
+        redirect="true"
+        />
+        <forward
+        name="gonggaoInfoLook"
+        path="/admin/gonggaoinfolook.jsp"
+        redirect="true"
+        />
+        <forward
+        name="gonggaoFind"
+        path="/gonggao.do?method=gonggaoFindExecute"
+        redirect="true"
+        />
+        <forward name="gonggaoBeforeModify"
+		path="/admin/gonggaoedit.jsp" 
+		redirect="true"
+		/>
+
+      </action>
+    <action
+      path="/qiantai"
+      type="com.struts.action.QiantaiAction"
+      parameter="method"
+      cancellable="true" >
+      <forward
+        name="qiantaiHome"
+        path="home.jsp"
+        redirect="true"
+        />
+        <forward
+        name="qiantaiGonggaoMana"
+        path="gonggaoqiantai.jsp"
+        redirect="true"
+        />
+        <forward name="qiantaiGonggaoLook"
+        path="gonggaolook.jsp"
+        redirect="true"></forward>
+        <forward
+        name="qiantaiPtzhaopinMana"
+        path="ptzhaopinqiantai.jsp"
+        redirect="true"
+        />
+        <forward name="qiantaiPtzhaopinLook"
+        path="ptzhaopinlook.jsp"
+        redirect="true"></forward>
+        <forward
+        name="qiantaiDxzhaopinMana"
+        path="dxzhaopinqiantai.jsp"
+        redirect="true"
+        />
+        <forward name="qiantaiDxzhaopinLook"
+        path="dxzhaopinlook.jsp"
+        redirect="true"></forward>
+      </action>
+    <action
+      path="/studentdocument"
+      parameter="method"
+      type="com.struts.action.StudentdocumentAction"
+      cancellable="true" >
+      <forward name="studentdocumentMana" path="/student/studentdocumentmana.jsp"
+        redirect="true"></forward>
+        <forward name="studentdocumentByTeacherMana" path="/teacher/studentdocumentmana.jsp"
+        redirect="true"></forward>
+        <forward name="studentdocumentByTeacherMana1" path="/teacher/studentshixizhoujimana.jsp"
+        redirect="true"></forward>
+        <forward name="studentshixizhoujiByTeacher" path="/teacher/studentshixizhouji.jsp"
+        redirect="true"></forward>
+        <forward name="studentdocReviewByTeacher" path="/teacher/studentdocreview.jsp"
+        redirect="true"
+        ></forward>
+      </action>
+  </action-mappings>
+
+
+  
+   <controller
+processorClass="org.springframework.web.struts.DelegatingRequestProcessor">
+</controller>
+  <message-resources parameter="com.struts.ApplicationResources" />
+<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+<set-property property="contextConfigLocation"
+value="/WEB-INF/applicationContext.xml" />
+</plug-in>
+</struts-config>
+

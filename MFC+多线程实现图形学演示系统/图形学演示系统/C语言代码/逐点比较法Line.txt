@@ -1,0 +1,52 @@
+         /***************************************************/
+         /************                        ***************/
+         /************  逐点比较直线生成算法  ***************/
+         /************                        ***************/
+         /***************************************************/
+判断依据：
+            |          F(i)>=0           |       F(i)<0
+ 第一象限   |   走+x,F(i+1)=F(i)-|yA|    |    走+y,F(i+1)=F(i)+|xA|
+ 第二象限   |   走-x,F(i+1)=F(i)-|yA|    |    走-y,F(i+1)=F(i)+|xA|
+ 第三象限   |   走+y,F(i+1)=F(i)-|xA|    |    走-x,F(i+1)=F(i)+|yA|
+ 第四象限   |   走-y,F(i+1)=F(i)-|xA|    |    走+x,F(i+1)=F(i)+|yA|
+C源程序如下：
+#include <stdio.h>
+#include <graphics.h>
+main()
+{  
+   int x1=60,y1=60,x2=300,y2=300,c=4;
+   int dx,dy,n,k,i,f;
+   int x,y;
+   int gdriver,gmode;
+   gdriver=DETECT;
+   initgraph(&gdriver,&gmode," ");
+   dx=abs(x2-x1);
+   dy=abs(y2-y1);
+   n=dx+dy;
+   if(x2>=x1) {k=y2>=y1?1:4; x=x1; y=y1;}
+     else 
+       {
+         k=y2>=y1?2:3; x=x2; y=y2;
+       }
+     putpixel(x,y,c);
+     for(i=0,f=0;i<n;i++)
+       if (f>=0)
+         switch(k)
+            {
+               case 1:putpixel(x++,y,c); f-=dy; break;
+               case 2:putpixel(x,y++,c); f-=dx; break; 
+               case 3:putpixel(x--,y,c); f-=dy; break;
+               case 4:putpixel(x,y--,c); f-=dx; break;
+            }
+       else
+        switch(k)
+            {
+               case 1:putpixel(x,y++,c); f+=dx; break;
+               case 2:putpixel(x--,y,c); f+=dy; break; 
+               case 3:putpixel(x,y--,c); f+=dx; break;
+               case 4:putpixel(x++,y,c); f+=dy; break;
+            }   
+   getch();
+   closegraph();
+}
+           

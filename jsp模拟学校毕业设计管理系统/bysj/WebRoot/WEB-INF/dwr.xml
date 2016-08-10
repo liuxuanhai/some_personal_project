@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC 
+"-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" 
+"http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+<allow>
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="new" javascript="login" >
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="class" value="com.login.login" />
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.login.login" converter="bean"></convert>
+</allow>
+</dwr>

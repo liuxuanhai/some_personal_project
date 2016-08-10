@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/administrator.do" location="950,1050" dimension="330,116" />
+  <StrutsActivity path="/academy.do" location="50,50" dimension="297,116" />
+  <StrutsActivity path="/classroom.do" location="350,250" dimension="305,116" />
+  <StrutsActivity path="/student.do" location="350,450" dimension="287,116" />
+  <StrutsActivity path="/teacher.do" location="50,650" dimension="287,116" />
+  <StrutsActivity path="/ptzhaopin.do" location="1250,650" dimension="301,116" />
+  <StrutsActivity path="/dxzhaopin.do" location="1550,1050" dimension="305,116" />
+  <StrutsActivity path="/gonggao.do" location="50,1850" dimension="297,116" />
+  <StrutsActivity path="/qiantai.do" location="350,2250" dimension="280,116" />
+  <StrutsActivity path="/studentdocument.do" location="2150,2450" dimension="362,116" />
+  <StrutsActivity path="/admin/adminedit.jsp" location="950,850" dimension="193,56" />
+  <StrutsActivity path="/admin/adminmana.jsp" location="50,1050" dimension="203,56" />
+  <StrutsActivity path="/admin/academyedit.jsp" location="50,850" dimension="213,56" />
+  <StrutsActivity path="/admin/academymana.jsp" location="50,250" dimension="223,56" />
+  <StrutsActivity path="/academy/academyjobs.jsp" location="1850,1850" dimension="235,56" />
+  <StrutsActivity path="/academy/academyteachertoclass.jsp" location="1850,150" dimension="309,56" />
+  <StrutsActivity path="/form/academy.jsp" location="650,50" dimension="174,56" />
+  <StrutsActivity path="/admin/classroomstudentlookup.jsp" location="650,1250" dimension="300,56" />
+  <StrutsActivity path="/academy/classroom.jsp" location="1850,650" dimension="213,56" />
+  <StrutsActivity path="/academy/classroomjobstat.jsp" location="950,2050" dimension="264,56" />
+  <StrutsActivity path="/admin/classroommana.jsp" location="50,450" dimension="232,56" />
+  <StrutsActivity path="/form/classroom.jsp" location="950,250" dimension="183,56" />
+  <StrutsActivity path="/admin/studentedit.jsp" location="350,1250" dimension="204,56" />
+  <StrutsActivity path="/student/studentinfo.jsp" location="2150,550" dimension="214,56" />
+  <StrutsActivity path="/admin/studentadd.jsp" location="350,850" dimension="203,56" />
+  <StrutsActivity path="/academy/classroomstudentlookup.jsp" location="1850,350" dimension="320,56" />
+  <StrutsActivity path="/academy/classroomjobs.jsp" location="650,2050" dimension="244,56" />
+  <StrutsActivity path="/student/studentdirtypestatus.jsp" location="2450,350" dimension="282,56" />
+  <StrutsActivity path="/admin/studentmana.jsp" location="950,50" dimension="214,56" />
+  <StrutsActivity path="/teacher/classroomstudentlookup.jsp" location="2450,1150" dimension="310,56" />
+  <StrutsActivity path="/student/studentmain.jsp" location="1850,2450" dimension="221,56" />
+  <StrutsActivity path="/form/student.jsp" location="950,450" dimension="165,56" />
+  <StrutsActivity path="/admin/teacheredit.jsp" location="50,1450" dimension="203,56" />
+  <StrutsActivity path="/academy/academyadmininfo.jsp" location="1550,2050" dimension="277,56" />
+  <StrutsActivity path="/admin/teacheradd.jsp" location="50,1250" dimension="202,56" />
+  <StrutsActivity path="/academy/academyteacherlookup.jsp" location="1850,1250" dimension="310,56" />
+  <StrutsActivity path="/teacher/teachermain.jsp" location="350,2450" dimension="219,56" />
+  <StrutsActivity path="/teacher/teacherclassmana.jsp" location="2450,950" dimension="257,56" />
+  <StrutsActivity path="/admin/academyteacherlookup.jsp" location="1250,250" dimension="290,56" />
+  <StrutsActivity path="/teacher/teacherinfo.jsp" location="650,2450" dimension="212,56" />
+  <StrutsActivity path="/admin/teachermana.jsp" location="950,650" dimension="213,56" />
+  <StrutsActivity path="/academy/academymain.jsp" location="50,2050" dimension="239,56" />
+  <StrutsActivity path="/form/teacher.jsp" location="650,650" dimension="164,56" />
+  <StrutsActivity path="/admin/ptzhaopininfolook.jsp" location="1550,850" dimension="252,56" />
+  <StrutsActivity path="/admin/ptzhaopinmana.jsp" location="950,1450" dimension="231,56" />
+  <StrutsActivity path="/admin/ptzhaopinedit.jsp" location="1250,1450" dimension="221,56" />
+  <StrutsActivity path="/form/ptzhaopin.jsp" location="350,1650" dimension="182,56" />
+  <StrutsActivity path="/admin/dxzhaopinmana.jsp" location="1550,1450" dimension="233,56" />
+  <StrutsActivity path="/admin/dxzhaopinedit.jsp" location="650,1650" dimension="223,56" />
+  <StrutsActivity path="/admin/dxzhaopininfolook.jsp" location="1250,1650" dimension="254,56" />
+  <StrutsActivity path="/form/dxzhaopin.jsp" location="1550,1250" dimension="184,56" />
+  <StrutsActivity path="/admin/gonggaomana.jsp" location="950,1850" dimension="225,56" />
+  <StrutsActivity path="/admin/gonggaoinfolook.jsp" location="1250,1850" dimension="246,56" />
+  <StrutsActivity path="/admin/gonggaoedit.jsp" location="1550,1850" dimension="215,56" />
+  <StrutsActivity path="/form/gonggao.jsp" location="650,1850" dimension="176,56" />
+  <StrutsActivity path="home.jsp" location="1250,2250" dimension="104,56" />
+  <StrutsActivity path="dxzhaopinlook.jsp" location="1550,2250" dimension="169,56" />
+  <StrutsActivity path="gonggaolook.jsp" location="2150,950" dimension="161,56" />
+  <StrutsActivity path="dxzhaopinqiantai.jsp" location="2150,2250" dimension="186,56" />
+  <StrutsActivity path="ptzhaopinlook.jsp" location="2150,1850" dimension="167,56" />
+  <StrutsActivity path="ptzhaopinqiantai.jsp" location="2150,2050" dimension="184,56" />
+  <StrutsActivity path="gonggaoqiantai.jsp" location="2150,750" dimension="178,56" />
+  <StrutsActivity path="/student/studentdocumentmana.jsp" location="2450,650" dimension="300,56" />
+  <StrutsActivity path="/teacher/studentshixizhoujimana.jsp" location="2450,1750" dimension="299,56" />
+  <StrutsActivity path="/teacher/studentshixizhouji.jsp" location="2450,1950" dimension="260,56" />
+  <StrutsActivity path="/teacher/studentdocumentmana.jsp" location="2450,1350" dimension="299,56" />
+  <StrutsActivity path="/form/administrator.jsp" location="350,1050" dimension="207,56" />
+  <StrutsActivity path="student/studentdocumentmana.jsp" location="50,2650" dimension="294,56" />
+  <StrutsActivity path="/admin/classroomjobs.jsp" location="350,2050" dimension="224,56" />
+  <StrutsActivity path="/admin/ptzhaopinadd.jsp" location="50,1650" dimension="220,56" />
+  <StrutsActivity path="/admin/dxzhaopinadd.jsp" location="950,1650" dimension="222,56" />
+  <StrutsActivity path="/admin/puzhaopinedit.jsp" location="1250,1250" dimension="224,56" />
+  <StrutsActivity path="/admin/puzhaopinmana.jsp" location="350,1450" dimension="234,56" />
+  <StrutsActivity path="/admin/puzhaopinadd.jsp" location="650,1450" dimension="223,56" />
+  <StrutsActivity path="/form/puzhaopin.jsp" location="1250,850" dimension="185,56" />
+  <StrutsActivity path="/form/admin.jsp" location="650,1050" dimension="154,56" />
+  <StrutsActivity path="/admin/adminadd.jsp" location="650,850" dimension="192,56" />
+  <StrutsActivity path="/admin/academyteacherlookupmana.jsp" location="1250,450" dimension="329,56" />
+  <StrutsActivity path="/academy/academyedit.jsp" location="1850,1450" dimension="233,56" />
+  <StrutsActivity path="/academy/academyteachertoclass.jsp.jsp" location="1850,1650" dimension="334,56" />
+  <StrutsActivity path="/teacher/admingonggao.jsp" location="50,2250" dimension="241,56" />
+  <StrutsActivity path="home.html" location="950,2250" dimension="116,56" />
+  <StrutsActivity path="gonggaoinfolook.jsp" location="2150,1450" dimension="189,56" />
+  <StrutsActivity path="academy/academymain.jsp" location="1850,2250" dimension="233,56" />
+  <StrutsActivity path="./academy/academymain.jsp" location="50,2450" dimension="243,56" />
+  <StrutsActivity path="/teacher/academyadmininfo.jsp" location="950,2450" dimension="267,56" />
+  <StrutsActivity path="/t/academyadmininfo.jsp" location="1550,2450" dimension="218,56" />
+  <StrutsActivity path="/teacher/studentdocumentmana1.jsp" location="2450,1550" dimension="308,56" />
+  <StrutsActivity path="/student/studentmessage.jsp" location="2450,2150" dimension="250,56" />
+  <StrutsActivity path="/teacher/studentdocreview.jsp" />
+  <StrutsTransition id="/student.do,studentDirtypeStatus,/student/studentdirtypestatus.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,508" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dxzhaopin.do,dxzhaopinInfoLook,/admin/dxzhaopininfolook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1702,1108" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentDirTescher,/student/studentdirtypestatus.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,450" />
+      <AbsolutePoint location="493,421" />
+      <AbsolutePoint location="2591,421" />
+      <AbsolutePoint location="2591,406" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qiantai.do,qiantaiHome,home.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="490,2308" />
+      <AbsolutePoint location="1302,2278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentMana,/admin/studentmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="637,551" />
+      <AbsolutePoint location="1148,551" />
+      <AbsolutePoint location="1148,106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentFind,/student.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,508" />
+      <AbsolutePoint location="493,508" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/academy.do,academyTeacherMana,/academy/academyteachertoclass.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,108" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qiantai.do,qiantaiDxzhaopinMana,dxzhaopinqiantai.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="490,2308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/classroom.do,academyClassroomMana,/academy/classroom.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="502,308" />
+      <AbsolutePoint location="1956,678" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentManaByClassID,/admin/classroomstudentlookup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,508" />
+      <AbsolutePoint location="800,1278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentBeforeAdd,/admin/studentadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,566" />
+      <AbsolutePoint location="493,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/administrator.do,administratorMana,/admin/adminmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1151" />
+      <AbsolutePoint location="151,1151" />
+      <AbsolutePoint location="151,1106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,teacherFuzeClass,/teacher/teacherclassmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,650" />
+      <AbsolutePoint location="193,621" />
+      <AbsolutePoint location="2825,621" />
+      <AbsolutePoint location="2825,978" />
+      <AbsolutePoint location="2707,978" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,teacherLogin,/teacher/teachermain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,678" />
+      <AbsolutePoint location="-150,678" />
+      <AbsolutePoint location="-150,2581" />
+      <AbsolutePoint location="459,2581" />
+      <AbsolutePoint location="459,2506" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,teacherMana,/admin/teachermana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="337,721" />
+      <AbsolutePoint location="1056,721" />
+      <AbsolutePoint location="1056,706" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,academyLogin,/academy/academymain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,708" />
+      <AbsolutePoint location="-75,708" />
+      <AbsolutePoint location="-75,2078" />
+      <AbsolutePoint location="50,2078" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gonggao.do,gonggaoInfoLook,/admin/gonggaoinfolook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,1850" />
+      <AbsolutePoint location="198,1781" />
+      <AbsolutePoint location="1373,1781" />
+      <AbsolutePoint location="1373,1850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/classroom.do,classroomstudentMana,/admin/classroomstudentlookup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="502,308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/academy.do,academyJobStatMana,/academy/academyjobs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,108" />
+      <AbsolutePoint location="1967,1878" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/gonggao.jsp,null,/gonggao.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1878" />
+      <AbsolutePoint location="347,1878" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentdocument.do,studentdocReviewByTeacher,/teacher/studentshixizhouji.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2384,2450" />
+      <AbsolutePoint location="2384,1981" />
+      <AbsolutePoint location="2450,1981" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentdocument.do,studentdocumentByTeacherMana1,/teacher/studentshixizhoujimana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2512,2508" />
+      <AbsolutePoint location="2725,2508" />
+      <AbsolutePoint location="2725,1806" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gonggao.do,gonggaoBeforeModify,/admin/gonggaoedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,1908" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/student.jsp,null,/student.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,478" />
+      <AbsolutePoint location="637,478" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentdocument.do,studentshixizhoujiByTeacher,/teacher/studentshixizhouji.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2331,2508" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,academyClassjobsByAcademyid,/academy/classroomjobs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,508" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,academyTeacherManaByAcademyID,/academy/academyteacherlookup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,708" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentdocument.do,studentdocumentMana,/student/studentdocumentmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2331,2508" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dxzhaopin.do,dxzhaopinFind,/dxzhaopin.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1702,1108" />
+      <AbsolutePoint location="1702,1108" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qiantai.do,qiantaiDxzhaopinLook,dxzhaopinlook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="490,2308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,academyAdminInfo,/academy/academyadmininfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,738" />
+      <AbsolutePoint location="-225,738" />
+      <AbsolutePoint location="-225,2011" />
+      <AbsolutePoint location="1688,2011" />
+      <AbsolutePoint location="1688,2050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/classroom.do,classroomMana,/admin/classroommana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,321" />
+      <AbsolutePoint location="166,321" />
+      <AbsolutePoint location="166,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/ptzhaopin.jsp,null,/ptzhaopin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dxzhaopin.do,dxzhaopinBeforeModify,/admin/dxzhaopinedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1702,1108" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/teacher.jsp,null,/teacher.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,678" />
+      <AbsolutePoint location="337,678" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qiantai.do,qiantaiGonggaoMana,gonggaoqiantai.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="602,2250" />
+      <AbsolutePoint location="602,781" />
+      <AbsolutePoint location="2150,781" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ptzhaopin.do,ptzhaopinInfoLook,/admin/ptzhaopininfolook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1400,708" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/academy.jsp,null,/academy.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,78" />
+      <AbsolutePoint location="347,78" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gonggao.do,gonggaoFind,/gonggao.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,1908" />
+      <AbsolutePoint location="198,1908" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/academy.do,academyMana,/admin/academymana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="161,166" />
+      <AbsolutePoint location="161,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/classroom.jsp,null,/classroom.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,278" />
+      <AbsolutePoint location="655,278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,teacherBeforeAdd,/admin/teacheradd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="278,766" />
+      <AbsolutePoint location="278,1278" />
+      <AbsolutePoint location="252,1278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentTeacherManaByClassID,/teacher/classroomstudentlookup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,551" />
+      <AbsolutePoint location="-450,551" />
+      <AbsolutePoint location="-450,1181" />
+      <AbsolutePoint location="2450,1181" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,personTeacherInfo,/teacher/teacherinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="223,766" />
+      <AbsolutePoint location="223,781" />
+      <AbsolutePoint location="-300,781" />
+      <AbsolutePoint location="-300,2671" />
+      <AbsolutePoint location="756,2671" />
+      <AbsolutePoint location="756,2506" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentdocument.do,studentdocumentByTeacherMana,/teacher/studentdocumentmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2354,2450" />
+      <AbsolutePoint location="2354,1378" />
+      <AbsolutePoint location="2450,1378" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,teacherManaByAcademyID,/admin/academyteacherlookup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,708" />
+      <AbsolutePoint location="1395,278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qiantai.do,qiantaiGonggaoLook,gonggaolook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,2351" />
+      <AbsolutePoint location="2414,2351" />
+      <AbsolutePoint location="2414,978" />
+      <AbsolutePoint location="2311,978" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/administrator.do,administratorBeforeModify,/admin/adminedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1046,1050" />
+      <AbsolutePoint location="1046,906" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/studentdocument.do,studentdocReviewByTeacher,/teacher/studentdocreview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2331,2508" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentLogin,/student/studentmain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,521" />
+      <AbsolutePoint location="-375,521" />
+      <AbsolutePoint location="-375,2411" />
+      <AbsolutePoint location="1960,2411" />
+      <AbsolutePoint location="1960,2450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qiantai.do,qiantaiPtzhaopinMana,ptzhaopinqiantai.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="490,2250" />
+      <AbsolutePoint location="490,2181" />
+      <AbsolutePoint location="2242,2181" />
+      <AbsolutePoint location="2242,2106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qiantai.do,qiantaiPtzhaopinLook,ptzhaopinlook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="630,2321" />
+      <AbsolutePoint location="2130,2321" />
+      <AbsolutePoint location="2130,1878" />
+      <AbsolutePoint location="2150,1878" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,personStudentInfo,/student/studentinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,508" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/academy.do,academyBeforeModify,/admin/academyedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="198,108" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/dxzhaopin.jsp,null,/dxzhaopin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1702,1250" />
+      <AbsolutePoint location="1702,1166" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentDirTescher,/student/studentmessage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,450" />
+      <AbsolutePoint location="493,421" />
+      <AbsolutePoint location="2915,421" />
+      <AbsolutePoint location="2915,2178" />
+      <AbsolutePoint location="2700,2178" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentBeforeModify,/admin/studentedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="572,566" />
+      <AbsolutePoint location="572,1278" />
+      <AbsolutePoint location="554,1278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dxzhaopin.do,dxzhaopinMana,/admin/dxzhaopinmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1702,1108" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/gonggao.do,gonggaoMana,/admin/gonggaomana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="347,1921" />
+      <AbsolutePoint location="1062,1921" />
+      <AbsolutePoint location="1062,1906" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ptzhaopin.do,ptzhaopinBeforeModify,/admin/ptzhaopinedit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/student.do,studentAcademyManaByClassID,/academy/classroomstudentlookup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,508" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/classroom.do,classroomJobStatMana,/academy/classroomjobstat.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="502,308" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,teacherBeforeModify,/admin/teacheredit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="308,766" />
+      <AbsolutePoint location="308,1478" />
+      <AbsolutePoint location="253,1478" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/teacher.do,teacherFind,/teacher.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="193,766" />
+      <AbsolutePoint location="193,811" />
+      <AbsolutePoint location="725,811" />
+      <AbsolutePoint location="725,751" />
+      <AbsolutePoint location="337,751" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ptzhaopin.do,ptzhaopinMana,/admin/ptzhaopinmana.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ptzhaopin.do,ptzhaopinFind,/ptzhaopin.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

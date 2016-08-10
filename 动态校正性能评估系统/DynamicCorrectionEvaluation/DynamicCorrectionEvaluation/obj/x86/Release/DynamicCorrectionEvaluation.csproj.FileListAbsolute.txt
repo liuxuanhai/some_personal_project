@@ -1,0 +1,9 @@
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\bin\Release\DynamicCorrectionEvaluation.exe
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\bin\Release\DynamicCorrectionEvaluation.pdb
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\bin\Release\IrisSkin4.dll
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\obj\x86\Release\DynamicCorrectionEvaluation.FormLogin.resources
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\obj\x86\Release\DynamicCorrectionEvaluation.FormMain.resources
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\obj\x86\Release\DynamicCorrectionEvaluation.Properties.Resources.resources
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\obj\x86\Release\DynamicCorrectionEvaluation.csproj.GenerateResource.Cache
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\obj\x86\Release\DynamicCorrectionEvaluation.exe
+E:\temp\git\动态校正性能评估系统\DynamicCorrectionEvaluation\DynamicCorrectionEvaluation\obj\x86\Release\DynamicCorrectionEvaluation.pdb

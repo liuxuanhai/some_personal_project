@@ -1,0 +1,8 @@
+CString  szFileFilter=_T("MP4 File(*.mp4)|*.mp4|AVI File(*.avi)|*.avi|Movie File(*.mov)|*.mov|All File(*.*)|*.*|| ");//文件类型过滤
+       CFileDialog  dlg(true,NULL,NULL,OFN_HIDEREADONLY,szFileFilter,this);
+       if(dlg.DoModal()==IDOK)
+       {
+              CString   PathName=dlg.GetPathName();
+              PathName.MakeUpper();
+              m_Player.put_URL(PathName);   
+       }

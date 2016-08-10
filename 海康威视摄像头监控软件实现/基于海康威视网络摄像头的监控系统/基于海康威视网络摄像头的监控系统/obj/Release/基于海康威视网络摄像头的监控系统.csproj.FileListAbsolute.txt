@@ -1,0 +1,12 @@
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.FormDeviceAdd.resources
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.FormMain.resources
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.FormRecord.resources
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.Properties.Resources.resources
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.csproj.GenerateResource.Cache
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\bin\Release\基于海康威视网络摄像头的监控系统.exe
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\bin\Release\基于海康威视网络摄像头的监控系统.pdb
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.exe
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.pdb
+C:\Users\jly\Desktop\代做毕设\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.csprojResolveAssemblyReference.cache
+C:\Users\jly\Desktop\代做毕设\已完成\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.exe
+C:\Users\jly\Desktop\代做毕设\已完成\海康威视监控系统\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\Release\基于海康威视网络摄像头的监控系统.pdb

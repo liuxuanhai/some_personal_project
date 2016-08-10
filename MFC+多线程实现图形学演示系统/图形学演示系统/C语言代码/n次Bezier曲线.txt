@@ -1,0 +1,50 @@
+         /***************************************************/
+         /************                        ***************/
+         /************     n´ÎBezierÇúÏß      ***************/
+         /************                        ***************/
+         /***************************************************/
+#define n 6
+void BezierCurve(int x[n],int y[n],int color)
+/******ÀýÈç£ºx=50,150,200,240,260,300,*****
+ ************y=50,160,180,80,40,200********/
+{
+  int x0,y0,x1,y1,x01,y01,x11,y11,xx[6],yy[6];
+  float xs,ys,xe,ye;
+  float b,t;
+  int i;
+  setcolor(color);
+  for(i=0;i<n;i++)
+    line(x[i], y[i],x[i+1],y[i+1]);
+  xs=float(x[0]);
+  ys=float(y[0]);
+  t = 0.01
+ While(t<=1.0000001)
+   {
+     xe=0.0;
+     ye=0.0;
+     for(i=0;i<n;i++)
+        {
+           b=bh(i,n,t);
+           xe+=x[i]*b;
+           ye+=y[i]*b;
+        }
+     line ((int)xs,(int)ys,(int)xe,(int)ye);
+     xs=xe;
+     ys=ye;
+     t+=0.01;
+   } 
+}
+float bb(int i,int n,float t)
+{
+   int k;
+   float a=1.0,b=1.0;
+   for(k=i+1;i<n;i++)
+     a*=k;
+   for(k=1;k<n-i;k++)
+     b*=k;
+   bh=a/b;
+   for(k=1;k<i;k++)
+      bh*=t;
+   for(k=1;k<n-i;k++)
+      hb*=(1.0-t);
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC 
+"-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" 
+"http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+<allow>
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="administrator" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/administrator" />
+		<!--此action类的方法administratorLogin可被前台视图访问 -->
+		<include method="administratorLogin"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.AdministratorAction" converter="bean"></convert>
+	
+	
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="goodtype" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/goodtype" />
+		<!--此action类的方法administratorLogin可被前台视图访问 -->
+		<include method="goodtypeAdd"/>
+		<include method="goodtypeEdit"/>
+		<include method="getGoodType"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.GoodtypeAction" converter="bean"></convert>
+	
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="roomtype" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/roomtype" />
+		<!--此action类的方法administratorLogin可被前台视图访问 -->
+		<include method="addRoomtype"/>
+		<include method="editRoomtype"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.RoomtypeAction" converter="bean"></convert>
+	
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="spotuser" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/spotuser" />
+		<!--此action类的方法administratorLogin可被前台视图访问 -->
+		<include method="spotuserIsExist"/>
+		<include method="spotuserRegister"/>
+		<include method="spotuserLogin"/>
+		<include method="spotorderAdd"/>
+		<include method="hotelorderAdd"/>
+		<include method="spotuserModifyInfo"/>
+		<include method="addcomment"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.SpotuserAction" converter="bean"></convert>
+</allow>
+</dwr>

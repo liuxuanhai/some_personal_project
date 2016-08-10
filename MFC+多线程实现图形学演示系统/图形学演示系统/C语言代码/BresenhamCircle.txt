@@ -1,0 +1,45 @@
+         //***************************************************//
+         //************                        ***************//
+         //************ Bresenham算法圆的生成  ***************//
+         //************                        ***************//
+         //***************************************************//
+1、求误差初值，p1=3-2r; i=1；画点(0, r)；　
+2、求下一个光栅位置： x(i+1) = x(i)+1；
+	如果pi<0则y(i+1) = y(i) ，否则y(i+1) = y(i)-1 ；
+3、画点（x(i+1),y(i+1)）;　
+4、计算下一个误差：
+	if pi<0 则p(i+1) = p(i)+4x(i)+6；
+	否则 p(i+1)= p(i)+4(x(i)-y(i))+10；
+5、i=i+1;  if x=y 则end；否则返2。
+c源程序：
+Bres_circle (xc, yc, radius, c)
+int xc, yc, radius, c;
+{	
+   int x, y, p;  x=0;
+   y=radius;  
+   p=3-2*radius;
+   while (x<y)
+    {
+       plot_circle_points(xc, yc, x, y, c);
+       if (p<0) p=p+4*x+6;
+          else
+            {
+               p=p+4*(x-y)+10;
+               y-=1;
+            }
+            x+=1;
+    }
+   if (x= =y)
+     plot_circle_points(xc, yc, x, y, c);
+}
+plot_circle_points(xc, yc, x, y, color)
+int xc, yc, x, y, color;
+{	putpixel(xc+x, yc+y, c);
+	putpixel(xc-x, yc+y, c);
+	putpixel(xc+x, yc-y, c);
+	putpixel(xc-x, yc-y, c);
+	putpixel(xc+y, yc+x, c);
+	putpixel(xc-y, yc+x, c);
+	putpixel(xc+y, yc-x, c);
+	putpixel(xc-y, yc-x, c);
+}

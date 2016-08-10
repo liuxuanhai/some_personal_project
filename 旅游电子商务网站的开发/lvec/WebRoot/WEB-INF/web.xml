@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>lvec</display-name>
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>WEB-INF/applicationContext.xml</param-value>
+  </context-param>
+   <!--spring编码过滤器start -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+        </filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--spring编码过滤器end -->
+  <servlet>
+<servlet-name>dwr-invoker</servlet-name>
+<servlet-class>
+org.directwebremoting.servlet.DwrServlet
+</servlet-class>
+<init-param>
+<param-name>debug</param-name>
+<param-value>true</param-value>
+</init-param>
+</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>viewspotAddServlet</servlet-name>
+    <servlet-class>com.servlet.viewspotAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>viewspotEditServlet</servlet-name>
+    <servlet-class>com.servlet.viewspotEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>hotelAddServlet</servlet-name>
+    <servlet-class>com.servlet.hotelAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>hotelEditServlet</servlet-name>
+    <servlet-class>com.servlet.hotelEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>goodinfoAddServlet</servlet-name>
+    <servlet-class>com.servlet.goodinfoAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>goodinfoEditServlet</servlet-name>
+    <servlet-class>com.servlet.goodinfoEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>luntanhuatiAddServlet</servlet-name>
+    <servlet-class>com.servlet.luntanhuatiAddServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+<servlet-mapping>
+<servlet-name>dwr-invoker</servlet-name>
+<url-pattern>/dwr/*</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>viewspotAddServlet</servlet-name>
+    <url-pattern>/servlet/viewspotAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>viewspotEditServlet</servlet-name>
+    <url-pattern>/servlet/viewspotEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>hotelAddServlet</servlet-name>
+    <url-pattern>/servlet/hotelAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>hotelEditServlet</servlet-name>
+    <url-pattern>/servlet/hotelEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>goodinfoAddServlet</servlet-name>
+    <url-pattern>/servlet/goodinfoAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>goodinfoEditServlet</servlet-name>
+    <url-pattern>/servlet/goodinfoEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>luntanhuatiAddServlet</servlet-name>
+    <url-pattern>/servlet/luntanhuatiAddServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

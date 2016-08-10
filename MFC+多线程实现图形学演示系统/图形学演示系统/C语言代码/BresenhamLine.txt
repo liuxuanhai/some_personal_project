@@ -1,0 +1,109 @@
+         //***************************************************//
+         //************                        ***************//
+         //************  Bresenham直线生成算法 ***************//
+         //************                        ***************//
+         //***************************************************//
+设：p1=2dy-dx
+    综述上面的推导，第1a象限内的直线Bresenham算法思想如下：
+1、画起点(x1,y1), dx=x2-x1,dy=y2-y1,计算误差初值 
+      p1=2dy-dx;         i=1；
+2、求直线的下一点位置： x(i+1)=x(i+1)；
+      if  p(i)>0 则y(i+1)=y(i+1)；否则y(i+1)= y(i)；
+3、画点(x(i+1),y(i+1))；
+4、求下一个误差p(i+1)；
+   if p(i)>0   则   p(i+1)= p(i)+2dy-2dx;
+            否则  p(i+1)=p(i)+2dy；
+5、i=i+1;  if i<dx+1则转2；
+否则end
+
+Bresenham算法的优点是：
+1、不必计算直线之斜率，因此不做除法；
+2、不用浮点数，只用整数；
+3、只做整数加减法和乘2运算，而乘2运算可以用硬件移位实现。
+   Bresenham算法速度很快，并适于用硬件实现。
+
+程序说明：
+void Bres_line (x1, y1, x2, y2, c)
+int x1, y1, x2, y2, c;
+{
+  int dx;
+  int dy;
+  int x;
+  int y;
+  int p;
+  int const1;
+  int const2;
+  int inc;
+  int tmp;
+  dx=x2-x1;
+  dy=y2-y1;
+  if (dx*dy>=0)   /*准备x或y的单位递变值。*/
+    inc=1;
+    else
+      inc= -1;
+      if (abs(dx)>abs(dy))
+        {
+          if(dx<0)
+            {
+               tmp=x1;           /*将2a, 3a象限方向*/
+               x1=x2;             /*的直线变换到1a, 4a*/
+               x2=tmp;
+               tmp=y1;           /*象限方向去*/
+               y1=y2;
+               dx=-dy;
+               dy=-dy;
+            }
+          p=2*dy-dx;
+          const1=2*dy;            /*注意此时误差的*/
+          const2=2*(dy-dy);    /*变化参数取值. */
+          x=x1;
+          y=y1;
+          set_pixel(x, y, c);
+          while (x<x2)
+            {
+              x++;
+               if (p<0)
+                  p+=const1;
+                 else
+                     {
+                       y+=inc;
+                       p+=const2;
+                     }
+                 set_piexl(x, y, c);
+            }
+        }
+        else 
+          {
+            if (dy<0)
+               {
+                  tmp=x1;        /* 将3b, 4b象限方向的*/
+                  x1=x2;          /*直线变换到2b, 1b */
+                  x2=tmp;        /*象限方向去. */
+                  tmp=y1;
+                  y1=y2;
+                  dx=-dy;
+                  dy=-dy;
+               }
+            p=2*dx-dy;             /*注意此时误差的*/
+            const1=2*dx;           /*变化参数取值. */
+            const2=2*(dx-dy);
+            x=x1;
+            y=y1;
+            set_pixel (x, y, c);
+            while (y<y2)
+              {
+                y++;
+                if(p<0)
+                    p+=const1;
+                  else
+                    {
+                      x+=inc;
+                      p+=const2;
+                      set_pixel (x, y, c);
+                    }
+              }
+         }
+}　
+
+
+

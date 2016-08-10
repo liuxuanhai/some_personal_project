@@ -1,0 +1,8 @@
+C:\Users\jly\Desktop\windows下简单游戏-五子棋\windows下简单游戏-五子棋\bin\Debug\windows下简单游戏-五子棋.exe
+C:\Users\jly\Desktop\windows下简单游戏-五子棋\windows下简单游戏-五子棋\bin\Debug\windows下简单游戏-五子棋.pdb
+C:\Users\jly\Desktop\windows下简单游戏-五子棋\windows下简单游戏-五子棋\obj\x86\Debug\windows下简单游戏_五子棋.FormMain.resources
+C:\Users\jly\Desktop\windows下简单游戏-五子棋\windows下简单游戏-五子棋\obj\x86\Debug\windows下简单游戏_五子棋.Properties.Resources.resources
+C:\Users\jly\Desktop\windows下简单游戏-五子棋\windows下简单游戏-五子棋\obj\x86\Debug\windows下简单游戏-五子棋.csproj.GenerateResource.Cache
+C:\Users\jly\Desktop\windows下简单游戏-五子棋\windows下简单游戏-五子棋\obj\x86\Debug\windows下简单游戏-五子棋.exe
+C:\Users\jly\Desktop\windows下简单游戏-五子棋\windows下简单游戏-五子棋\obj\x86\Debug\windows下简单游戏-五子棋.pdb
+C:\Users\jly\Desktop\windows下简单游戏-五子棋\windows下简单游戏-五子棋\obj\x86\Debug\windows下简单游戏_五子棋.FormMainMain.resources

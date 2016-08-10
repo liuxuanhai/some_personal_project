@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" 
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/?useUnicode=true&amp;characterEncoding=utf-8">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="55555"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/pojo/Administrator.hbm.xml</value>
+				<value>com/pojo/Spotuser.hbm.xml</value>
+				<value>com/pojo/Viewspot.hbm.xml</value>
+				<value>com/pojo/Hotel.hbm.xml</value>
+				<value>com/pojo/Goodtype.hbm.xml</value>
+				<value>com/pojo/Goodinfo.hbm.xml</value>
+				<value>com/pojo/Spotorder.hbm.xml</value>
+				<value>com/pojo/Roomtype.hbm.xml</value>
+				<value>com/pojo/Hotelorder.hbm.xml</value>
+				<value>com/pojo/Goodorder.hbm.xml</value>
+				<value>com/pojo/Goodorderinfo.hbm.xml</value>
+				<value>com/pojo/Spotcomment.hbm.xml</value>
+				<value>com/pojo/Hotelcomment.hbm.xml</value>
+				<value>com/pojo/Goodcomment.hbm.xml</value>
+				<value>com/pojo/Luntanhuati.hbm.xml</value></list>
+		</property></bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" /><bean
+		id="AdministratorDAO" class="com.dao.AdministratorDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+</bean>
+	<!--依赖注入-->
+	<bean id="administratorService" class="com.service.AdministratorService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="administratorDAO"><ref bean="AdministratorDAO" /></property></bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/administrator" class="com.struts.action.AdministratorAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="administratorService"><ref bean="administratorService" /></property>
+	</bean>
+	<bean id="SpotuserDAO" class="com.dao.SpotuserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<!--依赖注入-->
+	<bean id="spotuserService" class="com.service.SpotuserService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="spotuserDAO"><ref bean="SpotuserDAO" /></property>
+		<property name="spotorderDAO"><ref bean="SpotorderDAO" /></property>
+		<property name="hotelorderDAO"><ref bean="HotelorderDAO" /></property>
+		<property name="goodorderDAO"><ref bean="GoodorderDAO" /></property>
+		<property name="goodcommentDAO"><ref bean="GoodcommentDAO" /></property>
+		<property name="goodorderinfoDAO"><ref bean="GoodorderinfoDAO" /></property>
+		<property name="spotcommentDAO"><ref bean="SpotcommentDAO" /></property>
+		<property name="hotelcommentDAO"><ref bean="HotelcommentDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/spotuser" class="com.struts.action.SpotuserAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="spotuserService"><ref bean="spotuserService" /></property>
+	</bean>
+	
+	<bean id="ViewspotDAO" class="com.dao.ViewspotDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="viewspotService" class="com.service.ViewspotService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="viewspotDAO"><ref bean="ViewspotDAO" /></property>
+		<property name="hotelDAO"><ref bean="HotelDAO" /></property>
+		<property name="spotcommentDAO"><ref bean="SpotcommentDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/viewspot" class="com.struts.action.ViewspotAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="viewspotService"><ref bean="viewspotService" /></property>
+	</bean>
+	<bean id="HotelDAO" class="com.dao.HotelDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="hotelService" class="com.service.HotelService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="hotelDAO"><ref bean="HotelDAO" /></property>
+		<property name="hotelcommentDAO"><ref bean="HotelcommentDAO" /></property>
+		<property name="viewspotDAO"><ref bean="ViewspotDAO" /></property>
+		<property name="roomtypeDAO"><ref bean="RoomtypeDAO" /></property>
+		</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/hotel" class="com.struts.action.HotelAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="hotelService"><ref bean="hotelService" /></property>
+	</bean>
+	<bean id="GoodtypeDAO" class="com.dao.GoodtypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="goodtypeService" class="com.service.GoodtypeService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodtypeDAO"><ref bean="GoodtypeDAO" /></property></bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/goodtype" class="com.struts.action.GoodtypeAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodtypeService"><ref bean="goodtypeService" /></property>
+	</bean>
+	<bean id="GoodinfoDAO" class="com.dao.GoodinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="goodinfoService" class="com.service.GoodinfoService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodinfoDAO"><ref bean="GoodinfoDAO" /></property>
+		<property name="goodtypeDAO"><ref bean="GoodtypeDAO" /></property>
+		<property name="goodcommentDAO"><ref bean="GoodcommentDAO" /></property>
+		<property name="goodorderDAO"><ref bean="GoodorderDAO" /></property>
+		<property name="goodorderinfoDAO"><ref bean="GoodorderinfoDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/goodinfo" class="com.struts.action.GoodinfoAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodinfoService"><ref bean="goodinfoService" /></property>
+	</bean>
+	<bean id="SpotorderDAO" class="com.dao.SpotorderDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="spotorderService" class="com.service.SpotorderService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="spotorderDAO"><ref bean="SpotorderDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/spotorder" class="com.struts.action.SpotorderAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="spotorderService"><ref bean="spotorderService" /></property>
+	</bean>
+	
+	<bean id="RoomtypeDAO" class="com.dao.RoomtypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="roomtypeService" class="com.service.RoomtypeService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="roomtypeDAO"><ref bean="RoomtypeDAO" /></property>
+		<property name="hotelDAO"><ref bean="HotelDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/roomtype" class="com.struts.action.RoomtypeAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="roomtypeService"><ref bean="roomtypeService" /></property>
+	</bean>
+	
+	<bean id="HotelorderDAO" class="com.dao.HotelorderDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="hotelorderService" class="com.service.HotelorderService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="hotelorderDAO"><ref bean="HotelorderDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/hotelorder" class="com.struts.action.HotelorderAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="hotelorderService"><ref bean="hotelorderService" /></property>
+	</bean>
+	<bean id="GoodorderDAO" class="com.dao.GoodorderDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="goodorderService" class="com.service.GoodorderService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodorderDAO"><ref bean="GoodorderDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/goodorder" class="com.struts.action.GoodorderAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodorderService"><ref bean="goodorderService" /></property>
+	</bean>
+	<bean id="GoodorderinfoDAO" class="com.dao.GoodorderinfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="goodorderinfoService" class="com.service.GoodorderinfoService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodorderinfoDAO"><ref bean="GoodorderinfoDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/goodorderinfo" class="com.struts.action.GoodorderinfoAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodorderinfoService"><ref bean="goodorderinfoService" /></property>
+	</bean>
+	
+	
+	<bean id="SpotcommentDAO" class="com.dao.SpotcommentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="spotcommentService" class="com.service.SpotcommentService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="spotcommentDAO"><ref bean="SpotcommentDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/spotcomment" class="com.struts.action.SpotcommentAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="spotcommentService"><ref bean="spotcommentService" /></property>
+	</bean>
+	<bean id="HotelcommentDAO" class="com.dao.HotelcommentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="hotelcommentService" class="com.service.HotelcommentService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="hotelcommentDAO"><ref bean="HotelcommentDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/hotelcomment" class="com.struts.action.HotelcommentAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="hotelcommentService"><ref bean="hotelcommentService" /></property>
+	</bean>
+	<bean id="GoodcommentDAO" class="com.dao.GoodcommentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="goodcommentService" class="com.service.GoodcommentService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodcommentDAO"><ref bean="GoodcommentDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/goodcomment" class="com.struts.action.GoodcommentAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="goodcommentService"><ref bean="goodcommentService" /></property>
+	</bean>
+	<bean id="LuntanhuatiDAO" class="com.dao.LuntanhuatiDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="luntanhuatiService" class="com.service.LuntanhuatiService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="luntanhuatiDAO"><ref bean="LuntanhuatiDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/luntanhuati" class="com.struts.action.LuntanhuatiAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="luntanhuatiService"><ref bean="luntanhuatiService" /></property>
+	</bean>
+	
+	</beans>

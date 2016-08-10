@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\订单管理\订单管理\bin\Debug\订单管理.exe
+C:\Users\Administrator\Desktop\订单管理\订单管理\bin\Debug\订单管理.pdb
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.FormMain.resources
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.Properties.Resources.resources
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.exe
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.pdb
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.FormOrderMana.resources
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.FormSysSet.resources
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.FormCPLB.resources
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.FormOrderInfo.resources
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.FormAddCP.resources
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.FormDataBaseMana.resources
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\Administrator\Desktop\订单管理\订单管理\obj\x86\Debug\订单管理.csproj.ResolveComReference.cache

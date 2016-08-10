@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="gb2312"?>
+<set>
+  <capture path="D:\" />
+  <record path="D:\" />
+  <motiondetect select="是" />
+  <sound select="是" />
+</set>

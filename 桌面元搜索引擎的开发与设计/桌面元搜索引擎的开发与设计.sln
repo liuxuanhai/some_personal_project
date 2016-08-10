@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "桌面元搜索引擎的开发与设计", "桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计.csproj", "{BFC1D7FA-F309-41E7-91D7-EAAEA15EC182}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFC1D7FA-F309-41E7-91D7-EAAEA15EC182}.Debug|x86.ActiveCfg = Debug|x86
+		{BFC1D7FA-F309-41E7-91D7-EAAEA15EC182}.Debug|x86.Build.0 = Debug|x86
+		{BFC1D7FA-F309-41E7-91D7-EAAEA15EC182}.Release|x86.ActiveCfg = Release|x86
+		{BFC1D7FA-F309-41E7-91D7-EAAEA15EC182}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

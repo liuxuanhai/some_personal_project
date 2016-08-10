@@ -1,0 +1,9 @@
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\bin\Debug\桌面元搜索引擎的开发与设计.exe
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\bin\Debug\桌面元搜索引擎的开发与设计.pdb
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\obj\x86\Debug\桌面元搜索引擎的开发与设计.FormMain.resources
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\obj\x86\Debug\桌面元搜索引擎的开发与设计.Properties.Resources.resources
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\obj\x86\Debug\桌面元搜索引擎的开发与设计.csproj.GenerateResource.Cache
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\obj\x86\Debug\桌面元搜索引擎的开发与设计.exe
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\obj\x86\Debug\桌面元搜索引擎的开发与设计.pdb
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\obj\x86\Debug\桌面元搜索引擎的开发与设计.csprojResolveAssemblyReference.cache
+C:\Users\jly\Desktop\桌面元搜索引擎的开发与设计\桌面元搜索引擎的开发与设计\obj\x86\Debug\桌面元搜索引擎的开发与设计.FormAbout.resources

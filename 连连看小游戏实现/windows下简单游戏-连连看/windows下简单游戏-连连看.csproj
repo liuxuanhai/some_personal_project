@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{808E7ACD-35C0-4617-8274-043F568C7C93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>windows下简单游戏_连连看</RootNamespace>
+    <AssemblyName>windows下简单游戏-连连看</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScore.Designer.cs">
+      <DependentUpon>FormScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="核心类\ClassKernel.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGame.Designer.cs">
+      <DependentUpon>FormGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="核心类\DBConnection.cs" />
+    <Compile Include="核心类\DBOperate.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGame.resx">
+      <DependentUpon>FormGame.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScore.resx">
+      <DependentUpon>FormScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\2_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\4_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\4_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\6.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\6_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\6_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\7.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\7_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\7_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\8.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\8_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\8_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\9.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\9_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\9_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\10_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\10_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\11.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\11_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\11_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\12.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\12_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\12_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\13.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\13_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\13_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\14.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\14_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\14_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\15.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\15_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\15_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\16_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\16_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\17.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\17_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\17_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\18.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\18_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\18_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\19.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\19_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\19_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\20.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\20_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\20_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\21.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\21_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\21_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\22.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\22_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\22_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\23.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\23_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\23_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\24.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\24_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\24_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\25.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\25_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\25_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\26.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\26_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\26_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\27.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\27_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\27_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\28.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\28_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\28_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\29.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\29_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\29_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\30.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\30_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\30_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\31.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\31_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\31_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\32_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\32_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\33.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\33_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\33_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\34.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\34_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\34_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\35.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\35_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\35_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\36.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\36_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\36_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\37.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\37_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\37_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\38.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\38_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\38_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\39.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\39_L1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\39_L2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\B1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\B2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\B3.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\B4.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\B5.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\B6.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\cursor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\dots.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\WelCome.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

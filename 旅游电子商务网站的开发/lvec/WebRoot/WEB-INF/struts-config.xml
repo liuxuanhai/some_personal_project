@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans >
+    <form-bean name="administratorForm" type="com.struts.form.AdministratorForm" />
+    <form-bean name="spotuserForm" type="com.struts.form.SpotuserForm" />
+    <form-bean name="viewspotForm" type="com.struts.form.ViewspotForm" />
+    <form-bean name="hotelForm" type="com.struts.form.HotelForm" />
+    <form-bean name="goodtypeForm" type="com.struts.form.GoodtypeForm" />
+    <form-bean name="goodinfoForm" type="com.struts.form.GoodinfoForm" />
+    <form-bean name="spotorderForm" type="com.struts.form.SpotorderForm" />
+    <form-bean name="roomtypeForm" type="com.struts.form.RoomtypeForm" />
+    <form-bean name="hotelorderForm" type="com.struts.form.HotelorderForm" />
+    <form-bean name="goodorderForm" type="com.cls.struts.form.GoodorderForm" />
+    <form-bean name="goodorderinfoForm" type="com.struts.form.GoodorderinfoForm" />
+    <form-bean name="spotcommentForm" type="com.struts.form.SpotcommentForm" />
+    <form-bean name="hotelcommentForm" type="com.struts.form.HotelcommentForm" />
+    <form-bean name="goodcommentForm" type="com.struts.form.GoodcommentForm" />
+    <form-bean name="luntanhuatiForm" type="com.struts.form.LuntanhuatiForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="administratorForm"
+      input="/form/administrator.jsp"
+      name="administratorForm"
+      parameter="method"
+      path="/administrator"
+      
+      scope="request"
+      type="com.struts.action.AdministratorAction"
+      cancellable="true" >
+      <forward
+        name="administratorAdd"
+        path="/admin/adminadd.jsp"
+        redirect="true"
+        />
+        <forward
+        name="administratorMana"
+        path="/admin/adminmana.jsp"
+        redirect="true"
+        />
+		<forward name="administratorBeforeModify"
+		path="/admin/adminedit.jsp" 
+		redirect="true"
+		/>
+      </action>
+    <action
+      attribute="spotuserForm"
+      input="/form/spotuser.jsp"
+      name="spotuserForm"
+      parameter="method"
+      path="/spotuser"
+      scope="request"
+      type="com.struts.action.SpotuserAction"
+      cancellable="true" >
+      <forward
+        name="spotuserAdd"
+        path="/qiantai/spotuseradd.jsp"
+        redirect="true"
+        />
+        <forward
+        name="spotuserMana"
+        path="/admin/spotusermana.jsp"
+        redirect="true"
+        />
+		<forward name="spotuserBeforeModify"
+		path="/qiantai/spotuseredit.jsp" 
+		redirect="true"
+		/>
+		<forward name="spotuserLogin" path="index.jsp" 
+		redirect="true"></forward>
+		<forward name="spotuserOrderLookMana"
+		path="orderlook.jsp" 
+		redirect="true"></forward>
+      </action>
+    <action
+      attribute="viewspotForm"
+      input="/form/viewspot.jsp"
+      name="viewspotForm"
+      parameter="method"
+      path="/viewspot"
+      scope="request"
+      type="com.struts.action.ViewspotAction"
+      cancellable="true" >
+        <forward
+        name="viewspotMana"
+        path="/admin/viewspotmana.jsp"
+        redirect="true"
+        />
+        
+		<forward name="viewspotBeforeModify"
+		path="/admin/viewspotedit.jsp" 
+		redirect="true"
+		/>
+		<forward
+        name="viewspotListMana"
+        path="viewspotlist.jsp"
+        redirect="true"
+        />
+		<forward name="viewspotInfoMana"
+		path="viewspotinfo.jsp" 
+		redirect="true"></forward>
+      </action>
+    <action
+      attribute="hotelForm"
+      input="/form/hotel.jsp"
+      name="hotelForm"
+      path="/hotel"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.HotelAction"
+      cancellable="true" >
+      <forward
+        name="hotelMana"
+        path="/admin/hotelmana.jsp"
+        redirect="true"
+        />
+		<forward name="hotelBeforeModify"
+		path="/admin/hoteledit.jsp" 
+		redirect="true"
+		/>
+		
+		<forward
+        name="hotelListMana"
+        path="hotellist.jsp"
+        redirect="true"
+        />
+		<forward name="hotelInfoMana"
+		path="hotelinfo.jsp" 
+		redirect="true"></forward>
+      </action>
+    <action
+      attribute="goodtypeForm"
+      input="/form/goodtype.jsp"
+      name="goodtypeForm"
+      parameter="method"
+      path="/goodtype"
+      scope="request"
+      type="com.struts.action.GoodtypeAction"
+      cancellable="true" >
+      <forward
+        name="goodtypeMana"
+        path="/admin/goodtypemana.jsp"
+        redirect="true"
+        />
+      </action>
+    <action
+      attribute="goodinfoForm"
+      input="/form/goodinfo.jsp"
+      name="goodinfoForm"
+      parameter="method"
+      path="/goodinfo"
+      scope="request"
+      type="com.struts.action.GoodinfoAction"
+      cancellable="true" >
+      <forward
+        name="goodinfoMana"
+        path="/admin/goodinfomana.jsp"
+        redirect="true"
+        />
+        <forward name="goodinfoBeforeModify"
+		path="/admin/goodinfoedit.jsp" 
+		redirect="true"
+		/>
+		<forward
+        name="goodinfoListMana"
+        path="goodlist.jsp"
+        redirect="true"
+        />
+		<forward name="goodinfoInfoMana"
+		path="goodinfo.jsp" 
+		redirect="true"></forward>
+		<forward name="goodinfoShoppingCartMana" path="shoppingcart.jsp" 
+		redirect="true"></forward>
+      </action>
+    <action
+      attribute="spotorderForm"
+      input="/form/spotorder.jsp"
+      name="spotorderForm"
+      path="/spotorder"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.SpotorderAction"
+      cancellable="true" >
+      <forward
+        name="spotorderMana"
+        path="/admin/spotordermana.jsp"
+        redirect="true"
+        />
+      </action>
+    <action
+      attribute="roomtypeForm"
+      input="/form/roomtype.jsp"
+      name="roomtypeForm"
+      path="/roomtype"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.RoomtypeAction"
+      cancellable="true" >
+      <forward
+        name="roomtypeMana"
+        path="/admin/hotelroomtypemana.jsp"
+        redirect="true"
+        />
+      </action>
+    <action
+      attribute="hotelorderForm"
+      input="/form/hotelorder.jsp"
+      name="hotelorderForm"
+      parameter="method"
+      path="/hotelorder"
+      scope="request"
+      type="com.struts.action.HotelorderAction"
+      cancellable="true" >
+      <forward
+        name="hotelorderMana"
+        path="/admin/hotelordermana.jsp"
+        redirect="true"
+        />
+      </action>
+    <action
+      attribute="goodorderForm"
+      input="/form/goodorder.jsp"
+      name="goodorderForm"
+      path="/goodorder"
+      parameter="method"
+      scope="request"
+      type="com.cls.struts.action.GoodorderAction"
+      cancellable="true" >
+      <forward
+        name="goodorderMana"
+        path="/admin/goodordermana.jsp"
+        redirect="true"
+        />
+      </action>
+    <action
+      attribute="goodorderinfoForm"
+      input="/form/goodorderinfo.jsp"
+      name="goodorderinfoForm"
+      parameter="method"
+      path="/goodorderinfo"
+      scope="request"
+      type="com.cls.struts.action.GoodorderinfoAction"
+      cancellable="true" >
+      <forward
+        name="goodorderinfoMana"
+        path="/admin/goodorderinfomana.jsp"
+        redirect="true"
+        />
+      </action>
+    <action
+      attribute="spotcommentForm"
+      input="/form/spotcomment.jsp"
+      name="spotcommentForm"
+      path="/spotcomment"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.SpotcommentAction"
+      cancellable="true" >
+      </action>
+    <action
+      attribute="hotelcommentForm"
+      input="/form/hotelcomment.jsp"
+      name="hotelcommentForm"
+      path="/hotelcomment"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.HotelcommentAction"
+      cancellable="true" >
+      </action>
+    <action
+      attribute="goodcommentForm"
+      input="/form/goodcomment.jsp"
+      name="goodcommentForm"
+      path="/goodcomment"
+      parameter="method"
+      scope="request"
+      type="com.struts.action.GoodcommentAction"
+      cancellable="true" >
+      
+      </action>
+    <action
+      attribute="luntanhuatiForm"
+      input="/form/luntanhuati.jsp"
+      name="luntanhuatiForm"
+      path="/luntanhuati"
+      scope="request"
+      parameter="method"
+      type="com.struts.action.LuntanhuatiAction"
+      cancellable="true" >
+      <forward name="luntanhuatiListMana" path="/luntanhuatilist.jsp"
+        redirect="true"></forward>
+       <forward name="luntanhuatiInfoMana" path="/luntanhuatiinfo.jsp"
+        redirect="true"></forward>
+      </action>
+  </action-mappings>
+
+
+  
+  <controller
+processorClass="org.springframework.web.struts.DelegatingRequestProcessor">
+</controller>
+ <message-resources parameter="com.struts.ApplicationResources" />
+<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+<set-property property="contextConfigLocation"
+value="/WEB-INF/applicationContext.xml" />
+</plug-in>
+</struts-config>
+

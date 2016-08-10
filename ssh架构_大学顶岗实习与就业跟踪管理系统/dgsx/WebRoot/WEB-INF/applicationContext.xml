@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" 
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/?useUnicode=true&amp;characterEncoding=utf-8">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="55555"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/pojo/Academy.hbm.xml</value>
+				<value>com/pojo/Administrator.hbm.xml</value>
+				<value>com/pojo/Classroom.hbm.xml</value>
+				<value>com/pojo/Student.hbm.xml</value>
+				<value>com/pojo/Teacher.hbm.xml</value>
+				<value>com/pojo/Ptzhaopin.hbm.xml</value>
+				<value>com/pojo/Dxzhaopin.hbm.xml</value>
+				<value>com/pojo/Gonggao.hbm.xml</value>
+				<value>com/pojo/Studentdocument.hbm.xml</value></list>
+		</property></bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!--一个doajax干小部分的事情  -->
+	<bean name="/doajax" class="com.ajax.doajax" abstract="false" lazy-init="default" autowire="default" >
+		<property name="administratorService"><ref bean="administratorService" /></property>
+	</bean>
+	
+<bean
+		id="AdministratorDAO" class="com.dao.AdministratorDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+</bean>
+<!--依赖注入-->
+	<bean id="administratorService" class="com.service.AdministratorService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="administratorDAO"><ref bean="AdministratorDAO" /></property></bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/administrator" class="com.struts.action.AdministratorAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="administratorService"><ref bean="administratorService" /></property>
+	</bean>
+
+	<bean id="AcademyDAO" class="com.dao.AcademyDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="academyService" class="com.service.AcademyService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="academyDAO"><ref bean="AcademyDAO" /></property></bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/academy" class="com.struts.action.AcademyAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="academyService"><ref bean="academyService" /></property>
+	</bean>
+	
+	<bean id="ClassroomDAO" class="com.dao.ClassroomDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="classroomService" class="com.service.ClassroomService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="classroomDAO"><ref bean="ClassroomDAO" /></property>
+		<property name="academyDAO"><ref bean="AcademyDAO" /></property>
+		</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/classroom" class="com.struts.action.ClassroomAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="classroomService"><ref bean="classroomService" /></property>
+	</bean>
+	
+	
+	<bean id="StudentDAO" class="com.dao.StudentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="studentService" class="com.service.StudentService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="studentDAO"><ref bean="StudentDAO" /></property>
+		<property name="academyDAO"><ref bean="AcademyDAO" /></property>
+		<property name="classroomDAO"><ref bean="ClassroomDAO" /></property>	
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/student" class="com.struts.action.StudentAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="studentService"><ref bean="studentService" /></property>
+	</bean>
+	
+	
+	<bean id="TeacherDAO" class="com.dao.TeacherDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="teacherService" class="com.service.TeacherService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="teacherDAO"><ref bean="TeacherDAO" /></property>
+		<property name="academyDAO"><ref bean="AcademyDAO" /></property>	
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/teacher" class="com.struts.action.TeacherAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="teacherService"><ref bean="teacherService" /></property>
+	</bean>
+	
+	
+	
+	<bean id="PtzhaopinDAO" class="com.dao.PtzhaopinDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="ptzhaopinService" class="com.service.PtzhaopinService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="ptzhaopinDAO"><ref bean="PtzhaopinDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/ptzhaopin" class="com.struts.action.PtzhaopinAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="ptzhaopinService"><ref bean="ptzhaopinService" /></property>
+	</bean>
+	
+	<bean id="DxzhaopinDAO" class="com.dao.DxzhaopinDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="dxzhaopinService" class="com.service.DxzhaopinService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="dxzhaopinDAO"><ref bean="DxzhaopinDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/dxzhaopin" class="com.struts.action.DxzhaopinAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="dxzhaopinService"><ref bean="dxzhaopinService" /></property>
+	</bean>
+	<bean id="GonggaoDAO" class="com.dao.GonggaoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="gonggaoService" class="com.service.GonggaoService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="gonggaoDAO"><ref bean="GonggaoDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/gonggao" class="com.struts.action.GonggaoAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="gonggaoService"><ref bean="gonggaoService" /></property>
+	</bean>
+	
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/qiantai" class="com.struts.action.QiantaiAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="gonggaoService"><ref bean="gonggaoService" /></property>
+		<property name="dxzhaopinService"><ref bean="dxzhaopinService" /></property>
+		<property name="ptzhaopinService"><ref bean="ptzhaopinService" /></property>
+	</bean>
+	<bean id="StudentdocumentDAO" class="com.dao.StudentdocumentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!--依赖注入-->
+	<bean id="studentdocumentService" class="com.service.StudentdocumentService" abstract="false" lazy-init="default" autowire="default" >
+		<property name="studentdocumentDAO"><ref bean="StudentdocumentDAO" /></property>
+		<property name="studentDAO"><ref bean="StudentDAO" /></property>
+		<property name="teacherDAO"><ref bean="TeacherDAO" /></property>
+		<property name="classroomDAO"><ref bean="ClassroomDAO" /></property>
+	</bean>
+	<!--依赖注入与action托管 name对应Struts的action的path-->
+	<bean name="/studentdocument" class="com.struts.action.StudentdocumentAction" abstract="false" lazy-init="default" autowire="default" >
+		<property name="studentdocumentService"><ref bean="studentdocumentService" /></property>
+	</bean>
+	
+	</beans>

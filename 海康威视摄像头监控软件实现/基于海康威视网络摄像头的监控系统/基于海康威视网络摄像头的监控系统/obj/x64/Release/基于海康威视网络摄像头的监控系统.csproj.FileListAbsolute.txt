@@ -1,0 +1,6 @@
+C:\Users\jly\Desktop\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\bin\x64\Release\基于海康威视网络摄像头的监控系统.exe
+C:\Users\jly\Desktop\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\x64\Release\基于海康威视网络摄像头的监控系统.FormDeviceAdd.resources
+C:\Users\jly\Desktop\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\x64\Release\基于海康威视网络摄像头的监控系统.FormMain.resources
+C:\Users\jly\Desktop\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\x64\Release\基于海康威视网络摄像头的监控系统.Properties.Resources.resources
+C:\Users\jly\Desktop\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\x64\Release\基于海康威视网络摄像头的监控系统.csproj.GenerateResource.Cache
+C:\Users\jly\Desktop\基于海康威视网络摄像头的监控系统\基于海康威视网络摄像头的监控系统\obj\x64\Release\基于海康威视网络摄像头的监控系统.exe

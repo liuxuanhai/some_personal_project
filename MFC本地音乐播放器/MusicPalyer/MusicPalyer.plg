@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MusicPalyer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MusicPalyer.res" /d "_DEBUG" /d "_AFXDLL" "E:\c_file\mfc_project\MusicPalyer\MusicPalyer.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP418.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MusicPalyer.pdb" /debug /machine:I386 /out:"Debug/MusicPalyer.exe" /pdbtype:sept 
+.\Debug\MusicList.obj
+.\Debug\MusicPalyer.obj
+.\Debug\MusicPalyerDlg.obj
+.\Debug\MyStatic.obj
+.\Debug\PlayControl.obj
+.\Debug\SkinButton.obj
+.\Debug\StdAfx.obj
+.\Debug\MusicPalyer.res
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP418.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+MusicPalyer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

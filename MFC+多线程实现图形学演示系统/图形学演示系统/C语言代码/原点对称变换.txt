@@ -1,0 +1,49 @@
+         /***************************************************/
+         /************                        ***************/
+         /************      原点对称变换      ***************/
+         /************                        ***************/
+         /***************************************************/
+变换矩阵：
+                           [-1  0  0]
+       [x',y',z']=[x  y  z][0  -1  0]
+                           [0   0  1]
+#include<graphics.h>
+int xmax=640,ymax=480;
+scx(int xj)
+{
+int x;
+x=xj+xmax/2;
+return(x);
+}
+scy (int yi)
+{
+  int y;
+  y=ymax-(yi+ymax/2);
+  return(y);
+}
+main()
+{
+  int i;
+  int x[4]={-70,-40,-50,-70};
+  int y[4]={-30,-40,-120,-30};
+  int gdriver=DETECT,gmode;
+  initgraph(&gdriver,&gmode,"");
+  line(0,240,640,240);
+  line(320,0,320,480);
+  for(i=0;i<3;i++)
+     {
+       line(scx(x[i]),scy(y[i]),scx(x[i+1]),scy(y[i+1]));
+     }
+  system("pause");
+  for(i=0;i<4;i++)
+     {
+       x[i]=-y[i];
+       y[i]=-x[i];
+     }
+  for(i=0;i<3;i++)
+     {
+       line(scx(x[i]),scy(y[i]),scx(x[i+1]),scy(y[i+1]));
+     }
+   getch();
+   closegraph();
+}

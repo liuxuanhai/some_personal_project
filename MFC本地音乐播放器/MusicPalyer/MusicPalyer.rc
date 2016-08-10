@@ -1,0 +1,277 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MusicPalyer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MusicPalyer1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 167, 56
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "音乐播放器..."
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,21
+    LTEXT           "MusicPalyer v1.0 ",IDC_STATIC,40,10,73,8,SS_NOPREFIX
+    LTEXT           "Copyright@音乐播放器",IDC_STATIC,40,25,75,8
+    DEFPUSHBUTTON   "确定",IDOK,123,7,36,14,WS_GROUP
+END
+
+IDD_MUSICPALYER_DIALOG DIALOGEX 0, 0, 320, 282
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "主菜单",IDC_MainMenu,"Button",BS_OWNERDRAW | WS_TABSTOP,283,17,30,14
+    CONTROL         "播放",IDC_Play,"Button",BS_OWNERDRAW | WS_TABSTOP,60,1,18,14
+    CONTROL         "停止",IDC_Stop,"Button",BS_OWNERDRAW | WS_TABSTOP,23,0,17,14
+    CONTROL         "Slider1",IDC_Volume,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,106,5,69,11
+    CONTROL         "Slider2",IDC_Progress,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,32,35,158,11
+    LISTBOX         IDC_MusicList,7,78,212,197,LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_ACCEPTFILES
+    CONTROL         "添加歌曲",IDC_AddMusic,"Button",BS_OWNERDRAW | WS_TABSTOP,7,54,36,14
+    CONTROL         "删除",IDC_DeleteMusic,"Button",BS_OWNERDRAW | WS_TABSTOP,47,54,26,14
+    CONTROL         "上一曲",IDC_BtnPre,"Button",BS_OWNERDRAW | WS_TABSTOP,43,1,16,14
+    CONTROL         "下一曲",IDC_BtnNext,"Button",BS_OWNERDRAW | WS_TABSTOP,78,2,17,14
+    CONTROL         "歌曲排序",IDC_BtnSort,"Button",BS_OWNERDRAW | WS_TABSTOP,81,54,36,14
+    LTEXT           "顺序",IDC_StaticPlayMode,7,6,20,10,SS_NOTIFY
+    CONTROL         "退出",IDC_BtnExit,"Button",BS_OWNERDRAW | WS_TABSTOP,276,0,37,14
+    CONTROL         "隐藏",IDC_BtnHide,"Button",BS_OWNERDRAW | WS_TABSTOP,248,19,28,14
+    CONTROL         "最小化",IDC_BtnMinSize,"Button",BS_OWNERDRAW | WS_TABSTOP,245,0,30,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "MusicPalyer Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "MusicPalyer"
+            VALUE "LegalCopyright", "版权所有 (C) 2014"
+            VALUE "OriginalFilename", "MusicPalyer.EXE"
+            VALUE "ProductName", "MusicPalyer 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 49
+    END
+
+    IDD_MUSICPALYER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        BOTTOMMARGIN, 275
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MainMenu MENU
+BEGIN
+    POPUP "MainMenu"
+    BEGIN
+        MENUITEM "音乐播放器...",                    IDM_MainAboutApp
+        MENUITEM SEPARATOR
+        POPUP "播放控制"
+        BEGIN
+            MENUITEM "停止",                          IDM_SubStop
+            MENUITEM SEPARATOR
+            MENUITEM "上一曲",                         IDM_SubPre
+            MENUITEM "下一曲",                         IDM_SubNext
+            MENUITEM SEPARATOR
+            MENUITEM "添加文件",                        IDM_SubAddFile
+        END
+        POPUP "音量控制"
+        BEGIN
+            MENUITEM "增大",                          IDM_SubAdd
+            MENUITEM "减小",                          IDM_SubPlus
+            MENUITEM "静音",                          IDM_SubQuiet
+        END
+        POPUP "播放模式"
+        BEGIN
+            MENUITEM "顺序",                          IDM_SubSeq
+            MENUITEM "循环",                          IDM_SubLoop
+            MENUITEM "随机",                          IDM_SubRandom
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "退出",                          IDM_MainExit
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_ADD_NORMAL          BITMAP                  "res\\bitmap1.bmp"
+IDB_ADD_OVER            BITMAP                  "res\\bmp00001.bmp"
+IDB_DELETE_NORMAL       BITMAP                  "res\\bmp00002.bmp"
+IDB_DELETE_OVER         BITMAP                  "res\\bitmap2.bmp"
+IDB_LIST_NORMAL         BITMAP                  "res\\bmp00003.bmp"
+IDB_LIST_OVER           BITMAP                  "res\\bmp00004.bmp"
+IDB_EXIT_NORMAL         BITMAP                  "res\\bmp00005.bmp"
+IDB_EXIT_OVER           BITMAP                  "res\\bmp00006.bmp"
+IDB_HIDE_NORMAL         BITMAP                  "res\\bmp00007.bmp"
+IDB_HIDE_OVER           BITMAP                  "res\\bmp00008.bmp"
+IDB_MIN_NORMAL          BITMAP                  "res\\bmp00009.bmp"
+IDB_MIN_OVER            BITMAP                  "res\\bmp00010.bmp"
+IDB_MAINMENU_NORMAL     BITMAP                  "res\\bmp00011.bmp"
+IDB_MAINMENU_OVER       BITMAP                  "res\\bmp00012.bmp"
+IDB_NEXT_NORMAL         BITMAP                  "res\\bmp00013.bmp"
+IDB_NEXT_OVER           BITMAP                  "res\\bmp00014.bmp"
+IDB_PRE_NORMAL          BITMAP                  "res\\bmp00015.bmp"
+IDB_PRE_OVER            BITMAP                  "res\\bmp00016.bmp"
+IDB_STOP_NORMAL         BITMAP                  "res\\bmp00017.bmp"
+IDB_STOP_OVER           BITMAP                  "res\\bmp00018.bmp"
+IDB_PLAY_NORMAL         BITMAP                  "res\\bmp00019.bmp"
+IDB_PLAY_OVER           BITMAP                  "res\\bmp00020.bmp"
+IDB_PAUSE_NORMAL        BITMAP                  "res\\insert_n.bmp"
+IDB_PAUSE_OVER          BITMAP                  "res\\insert_o.bmp"
+IDB_BACKGROUND          BITMAP                  "res\\格式工厂219077-120Z61AT512.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "音乐播放器..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\MusicPalyer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

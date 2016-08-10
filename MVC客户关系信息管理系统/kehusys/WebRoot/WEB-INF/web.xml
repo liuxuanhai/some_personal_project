@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+ <servlet>
+ <servlet-name>dwr-invoker</servlet-name>
+<servlet-class>
+org.directwebremoting.servlet.DwrServlet
+</servlet-class>
+<init-param>
+<param-name>debug</param-name>
+<param-value>true</param-value>
+</init-param>
+</servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CustomerServlet</servlet-name>
+    <servlet-class>com.servlet.CustomerServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>YuangongServlet</servlet-name>
+    <servlet-class>com.servlet.YuangongServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>JiaoyiServlet</servlet-name>
+    <servlet-class>com.servlet.JiaoyiServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>JiaoyitempServlet</servlet-name>
+    <servlet-class>com.servlet.JiaoyitempServlet</servlet-class>
+  </servlet>
+    <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FankuiServlet</servlet-name>
+    <servlet-class>com.servlet.FankuiServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TousuServlet</servlet-name>
+    <servlet-class>com.servlet.TousuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrdermanaServlet</servlet-name>
+    <servlet-class>com.servlet.OrdermanaServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrderdetailServlet</servlet-name>
+    <servlet-class>com.servlet.OrderdetailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrderdetailImportServlet</servlet-name>
+    <servlet-class>com.servlet.OrderdetailImportServlet</servlet-class>
+  </servlet>
+
+  
+  
+<servlet-mapping>
+<servlet-name>dwr-invoker</servlet-name>
+<url-pattern>/dwr/*</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CustomerServlet</servlet-name>
+    <url-pattern>/servlet/CustomerServlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet-mapping>
+    <servlet-name>YuangongServlet</servlet-name>
+    <url-pattern>/servlet/YuangongServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JiaoyiServlet</servlet-name>
+    <url-pattern>/servlet/JiaoyiServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>JiaoyitempServlet</servlet-name>
+    <url-pattern>/servlet/JiaoyitempServlet</url-pattern>
+  </servlet-mapping>
+  
+     <servlet-mapping>
+    <servlet-name>FankuiServlet</servlet-name>
+    <url-pattern>/servlet/FankuiServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>TousuServlet</servlet-name>
+    <url-pattern>/servlet/TousuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrdermanaServlet</servlet-name>
+    <url-pattern>/servlet/OrdermanaServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderdetailServlet</servlet-name>
+    <url-pattern>/servlet/OrderdetailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderdetailImportServlet</servlet-name>
+    <url-pattern>/servlet/OrderdetailImportServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

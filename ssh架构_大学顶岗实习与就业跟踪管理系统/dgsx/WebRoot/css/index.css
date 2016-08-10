@@ -1,0 +1,42 @@
+
+.title{
+margin:0;
+padding:0;
+font-size: 18px;
+height: 38px;
+line-height:38px;
+background-color: #B0C4DE;
+color:#FFFFFF;
+text-indent:20px;
+}
+.more1{
+	height:28px;
+	margin:10px  15px 0  0;
+	font-size:12px;
+	line-height:28px;
+	color:#FFFFFF;
+	float: right;
+	z-index:2;
+}
+.l_list{
+	width:auto;
+	border:0;
+	padding-right:5px;
+	margin:12px 0 0 0 ;	
+}
+.l_list ul li {
+	height:27px;
+	text-decoration: none;
+	list-style-position: inside ;
+	padding:5px 10px 0 10px;
+	
+}
+
+.l_list ul li a{
+	color: #5E4F3D;
+	text-decoration: none;
+}
+.l_list ul li a:hover { 
+	color: #D51515;
+}
+

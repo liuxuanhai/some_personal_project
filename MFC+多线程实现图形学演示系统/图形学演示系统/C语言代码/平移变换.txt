@@ -1,0 +1,44 @@
+         /***************************************************/
+         /************                        ***************/
+         /************        平移变换        ***************/
+         /************                        ***************/
+         /***************************************************/
+点的平移变换是指该点在X轴和Y轴方向上分别移动一段距离。
+设图形上点P(x,y)，将在X轴和Y轴方向分别移动Tx和Ty，
+结果生成新的点P′(x′,y′),如图所示，则有
+               x′=x+Tx，
+ 	       y′=y+Ty
+     用齐次坐标和矩阵形式可表示为：
+                        [ 1  0  0 ]
+   [x′,y′,1′]=[x,y,1]| 0  1  0 ]
+                        [ tx ty 1 ]	
+C源程序：
+#include<graphics.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#define pi 3.1415927
+main()
+{ int i;
+  int x1=0,y1=0,x2=0,y2=0,dx=0,dy=0;
+  int gdriver=DETECT,gmode;
+  printf("Please begin:(x,y)");
+  scanf("%d,%d",&x1,&y1);
+  printf("Please end:(x,y)");
+  scanf("%d,%d",&x2,&y2);
+  printf("Please input dx,dy:");
+  scanf("%d,%d",&dx,&dy);
+  initgraph(&gdriver,&gmode,"");
+  rectangle(x1,y1,x2,y2);
+  getch();
+     for(i=1;i<=3;i++)
+       {
+           rectangle(x1+i*dx,y1+i*dy,x2+i*dx,y2+i*dy);
+           getch();
+       }
+    getch();
+    closegraph();
+}
+
+
+    

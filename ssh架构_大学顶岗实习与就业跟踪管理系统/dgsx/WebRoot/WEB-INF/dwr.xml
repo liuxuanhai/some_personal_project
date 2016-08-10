@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC 
+"-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" 
+"http://getahead.org/dwr/dwr30.dtd">
+<dwr>
+<allow>
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="administrator" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/administrator" />
+		<!--此action类的方法可被前台视图访问 -->
+		<include method="administratorLogin"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.AdministratorAction" converter="bean"></convert>
+	
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="academy" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/academy" />
+		<!--此action类的方法可被前台视图访问 -->
+		<include method="findAcademyName"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.AcademyAction" converter="bean"></convert>
+	
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="classroom" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/classroom" />
+		<!--此action类的方法可被前台视图访问 -->
+		<include method="findClassroomName"/>
+		<include method="setTeacherToClassroom"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.ClassroomAction" converter="bean"></convert>
+	
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="student" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/student" />
+		<!--此action类的方法可被前台视图访问 -->
+		<include method="studentLogin"/>
+		<include method="findStudentStuid"/>
+		<include method="getAcademyClassroom"/>
+		<include method="getAcademyJobsStat"/>
+		<include method="getClassJobsStat"/>
+		<include method="studentInfoModify"/>
+		<include method="studentPWDModify"/>
+		<include method="modifyDirTypeStatus"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.StudentAction" converter="bean"></convert>
+	
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="teacher" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/teacher" />
+		<!--此action类的方法可被前台视图访问 -->
+		<include method="teacherLogin"/>
+		<include method="getTeacherName"/>
+		<include method="academyLogin"/>
+		<include method="findTeacherTeaid"/>
+		<include method="getTeacherClass"/>
+		<include method="teacherInfoModify"/>
+		<include method="teacherPWDModify"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.TeacherAction" converter="bean"></convert>
+	
+	<!-- javascript 的值是要生成的js文件名称（前台调用的方法）,create="spring"是 DWR由spring创建类-->
+	<create creator="spring" javascript="studentdocument" scope="application">
+	<!--使用bean  value对应struts的对应action的path-->
+	<param name="beanName" value="/studentdocument" />
+		<!--此action类的方法可被前台视图访问 -->
+		<include method="shenhestatus"/>
+	</create>
+	<!--将action转换为bean 供前面beanname使用-->
+	<convert match="com.struts.action.StudentdocumentAction" converter="bean"></convert>
+</allow>
+</dwr>
