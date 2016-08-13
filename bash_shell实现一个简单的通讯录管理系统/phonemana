@@ -1,0 +1,275 @@
+#!/bin/sh
+#by江林燕 2016.05
+#一些全局变量的声明定义 如菜单选项  联系人文件person.db  联系方式文件phone.db 
+menu_choice=""
+person_file="person.db"
+phone_file="phone.db"
+temp_file="/tmp/db.$$"   #$$为本脚本运行时的进程pid  定义缓存文件 用于辅助删除 等
+trap 'rm -f $temp_file' EXIT  #捕捉SIGEXIT信号(ctrl+C)则执行单引号内命令（删除缓存）
+
+#开始定义一些函数
+#返回 输入任意字符返回 
+get_return() {
+	echo   "输入任意字符返回 \c" # 启用反斜杠字符的转义  这里\c转义表示不换行
+	read x 
+	return 0
+}
+
+# 询问用户 确认是否 是返回0  否返回1
+get_confirm() {
+	echo   "确认吗?(yes或no) \c"
+	while true
+	do 
+		read x
+		case "$x" in 
+			y|Y|yes|Yes|YES)
+				return 0;;
+			[nN]|[nN][oO]) #通配符
+				echo
+				echo "取消"
+				return 1;;
+			*)  #其他情况
+				echo "请输入yes或no \c";;
+		esac
+	done
+}
+
+#主菜单
+set_menu_choice() {
+	clear
+	echo "菜单选项:-"
+	echo
+	echo "	a) 添加联系人"
+	echo "	f) 查找联系人"
+	echo "	c) 统计联系人与联系方式"
+	if [ "$curpersonnum" != "" ]; then   #[]测试真假 相当于test() 这里注意每个字段用空格符分开
+		echo "	l) 输出联系人$curperson的联系方式"
+		echo "	r) 删除联系人$curperson"
+		echo "	u) 更新联系人$curperson的联系方式"
+	fi
+	echo "	q) 退出"
+	echo
+	echo  "请输入你的选项 \c"
+	read menu_choice
+	return
+}	
+
+#存储联系人
+insert_person() {
+	echo $* >> $person_file #$*为传给这个函数的所有参数组成的字符串 >>为追加
+	return
+}
+
+#存储联系方式
+insert_phone() {
+	echo $* >> $phone_file
+	return
+}
+
+#添加联系人的联系方式
+add_person_phone() {
+	echo "请输入联系人$curperson的联系方式"
+	echo "当没有更多时输入q"
+	curphonenum=1
+	curphone=""
+	while [ "$curphone" != "q" ]; do 
+		echo   "联系方式$curphonenum为: \c"
+		read tmp
+		curphone=${tmp%%,*} #${%%,*}拿掉最后一个,及其后面的字符 ${}语法
+		if [ "$tmp" != "$curphone" ]; then 
+			echo "不允许输入含有逗号的联系方式" #因为这里为文件中每个字段间用,分开
+			continue
+		fi
+		if [ -n "$curphone" ]; then  #如果不为空
+			if [ "$curphone" != "q" ]; then 
+				insert_phone $curpersonnum,$curphonenum,$curphone  #存储联系方式（联系人编号,联系方式编号,联系方式）
+			fi
+		else
+			curphonenum=$((curphonenum-1))  #$(()) 计算表达式
+		fi
+		curphonenum=$((curphonenum+1))
+	done
+}
+
+#添加联系人
+add_persons() {
+	echo   "输入联系人编号 \c"
+	read tmp
+	curpersonnum=${tmp%%,*}
+	echo   "输入联系人姓名 \c"
+	read tmp
+	curperson=${tmp%%,*}
+	
+
+	echo "联系人信息如下"
+	echo "$curpersonnum $curperson"
+
+	if get_confirm ; then 
+		insert_person $curpersonnum,$curperson
+		add_person_phone  #接着添加联系方式
+	else 
+		curpersonnum=""
+		curperson=""
+	fi
+}
+
+#查找联系人
+find_person() {
+	if [ "$1" = "n" ]; then
+		asklist=n   #标志是否询问输出联系方式
+	else
+		asklist=y
+	fi
+	echo   "输入需要查找的联系人姓名 \c"
+	read searchstr
+	if [ "$searchstr" = "" ]; then 
+		return 0
+	fi
+	grep "$searchstr" $person_file > $temp_file #查询结果并缓存
+	set $(wc -l $temp_file)  #$()执行命令并返回结果  用set设置结果为当前shell的环境变量  这里第一个环境变量参数$1就是统计好的行数
+	linesfound=$1
+	case "$linesfound" in 
+	0) echo "没有找到"
+		get_return
+		return 0;;
+	1) ;;
+	2)
+		echo "找到的联系人不唯一"
+		echo "如下所示"
+		cat $temp_file
+		get_return 
+		return 0
+	esac
+	
+	IFS=","  #域分隔符设置为,  下行用于分割
+	read curpersonnum curperson < $temp_file
+	IFS=" "  #还原
+	if [ -z "$curpersonnum" ]; then #为空
+		echo "分割$temp_file失败"
+		get_return
+		return 0
+	fi
+
+	echo
+	echo "联系人信息:$curpersonnum $curperson"
+	echo
+	get_return
+	if [ "$asklist" = "y" ]; then
+		echo   "查看此联系人的联系方式？(y或其他) \c"
+		read x
+		if [ "$x" = "y" ]; then 
+			echo 
+			list_phone  #输出联系方式
+			echo
+		fi
+	fi
+	return 1
+}
+
+#更新联系方式
+update_phone() {
+	if [ -z "$curpersonnum" ]; then  #如果为空
+		echo "请选择一个联系人"
+		find_person n
+	fi
+	if [ -n "$curpersonnum" ]; then #如果非空
+		echo "现联系方式:"
+		list_phone
+		echo
+		echo "下面更新联系人$curperson的联系方式（会删除原先的）"
+		get_confirm && { #只有get_confirm为true才执行{}内容
+			grep -v "^${curpersonnum}," $phone_file > $temp_file #这里将本联系人以外的联系方式都移到缓存中  ${curpersonnum},是因为有,  所有加上{}限定curpersonnum里面的值+，开头的曲目  并-v取逆
+			mv $temp_file $phone_file  #结合上面一行完成了删除此cur的曲目
+			echo
+			add_person_phone #重新添加
+		}
+	fi
+	return
+}
+
+#统计联系人数目
+count_persons() {
+	set $(wc -l $person_file)  #直接用wc统计 返回结果用set设置为当前环境变量  那么第一个变量$1就是统计的数目
+	num_person=$1
+	set $(wc -l $phone_file)
+	num_phone=$1
+	echo "联系人总数$num_person,联系方式总数$num_phone"
+	get_return
+	return
+}
+
+#删除联系人
+remove_persons() {
+	if [ -z "$curpersonnum" ]; then 
+		echo "首先选择一个联系人"
+		find_person n
+	fi
+	if [ -n "$curpersonnum" ]; then 
+		echo "删除联系人$curperson？"
+		get_confirm && {
+			grep -v "^${curpersonnum}," $person_file > $temp_file
+			mv $temp_file $person_file
+			grep -v "^${curpersonnum}," $phone_file > $temp_file
+			mv $temp_file $phone_file
+			curpersonnum=""
+			echo "删除完成"
+		}
+		get_return
+	fi
+	return
+}
+
+#输出联系方式信息
+list_phone() {
+	if [ "$curpersonnum" = "" ]; then 
+		echo "没有选择联系人"
+		return
+	else 
+		grep "^${curpersonnum}," $phone_file > $temp_file
+		num_phone=$(wc -l $temp_file)
+		if [ "$num_phone" = "0" ]; then 
+			echo "联系人$curperson没有联系方式"
+		else 
+		{
+			echo
+			echo "联系人$curperson的联系方式:-"
+			echo
+			cut -f 2- -d , $temp_file    #cut命令 -d为分隔符 也就是,  -f为选中的字段  也就是2开始
+			echo
+		} | ${PAGER:-more} #管道 桉页输出
+		fi
+	fi
+	get_return
+	return
+}
+
+#主程序部分
+rm -f $temp_file
+if [ ! -f $person_file ]; then 
+	touch $person_file
+fi
+if [ ! -f $phone_file ]; then 
+	touch $phone_file
+fi
+clear
+echo
+echo
+echo "简单通讯录管理系统"
+sleep 1
+quit =n
+while [ "$quit" != "y" ]; do 
+	set_menu_choice
+	case "$menu_choice" in 
+		a) add_persons;;
+		r) remove_persons;;
+		f) find_person;;
+		u) update_phone;;
+		c) count_persons;;
+		l) list_phone;;
+		q|Q) quit=y;;
+		*) echo "请输入合法的选项";;
+	esac
+done
+rm -f $temp_file
+echo "系统已关闭"
+exit 0
